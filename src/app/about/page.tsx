@@ -171,9 +171,6 @@ export default function AboutPage() {
                 View Open Positions <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <p className="text-sm text-muted-foreground mt-4">
-              (Note: This will link to a careers page, to be created separately)
-            </p>
           </div>
         </section>
 
