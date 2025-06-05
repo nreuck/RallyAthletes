@@ -1,17 +1,29 @@
 
+"use client";
+
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Briefcase, MapPin, CalendarDays, ArrowRight, Send, Lightbulb } from 'lucide-react';
+import { Briefcase, MapPin, CalendarDays, ArrowRight, Send, Lightbulb, Search as SearchIcon, X as ClearIcon } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { companyBenefits, openPositions, type JobPosition } from '@/lib/careersData';
+import React, { useState, useMemo } from 'react';
+import { Input } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Label } from '@/components/ui/label';
 
-export const metadata: Metadata = {
-  title: 'Careers at Rally Athletes',
-  description: 'Join our innovative team and help shape the future of sports technology. Explore open positions at Rally Athletes.',
-};
+// Metadata needs to be handled differently for client components if dynamic parts are needed.
+// For a static title/description, it can be defined outside.
+// However, since this is now a "use client" component, if metadata were dynamic based on state,
+// it would require a different approach (e.g. updating document.title in useEffect or using a Server Component wrapper).
+// For this case, we'll assume static metadata is sufficient.
+// export const metadata: Metadata = { // This won't work directly in "use client" for dynamic scenarios
+//   title: 'Careers at Rally Athletes',
+//   description: 'Join our innovative team and help shape the future of sports technology. Explore open positions at Rally Athletes.',
+// };
+
 
 function JobPositionCard({ position }: { position: JobPosition }) {
   return (
@@ -47,6 +59,46 @@ function JobPositionCard({ position }: { position: JobPosition }) {
 }
 
 export default function CareersPage() {
+  const allPositions = openPositions;
+
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedDepartment, setSelectedDepartment] = useState('');
+  const [selectedLocation, setSelectedLocation] = useState('');
+  const [selectedType, setSelectedType] = useState('');
+
+  const departments = useMemo(() => Array.from(new Set(allPositions.map(p => p.department))), [allPositions]);
+  const locations = useMemo(() => Array.from(new Set(allPositions.map(p => p.location))), [allPositions]);
+  const types = useMemo(() => Array.from(new Set(allPositions.map(p => p.type))), [allPositions]);
+
+  const filteredPositions = useMemo(() => {
+    return allPositions.filter(position => {
+      const matchesSearchTerm =
+        searchTerm.trim() === '' ||
+        position.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        position.summary.toLowerCase().includes(searchTerm.toLowerCase());
+
+      const matchesDepartment =
+        selectedDepartment === '' || position.department === selectedDepartment;
+
+      const matchesLocation =
+        selectedLocation === '' || position.location === selectedLocation;
+
+      const matchesType =
+        selectedType === '' || position.type === selectedType;
+
+      return matchesSearchTerm && matchesDepartment && matchesLocation && matchesType;
+    });
+  }, [allPositions, searchTerm, selectedDepartment, selectedLocation, selectedType]);
+
+  const handleClearFilters = () => {
+    setSearchTerm('');
+    setSelectedDepartment('');
+    setSelectedLocation('');
+    setSelectedType('');
+  };
+  
+  const areFiltersActive = searchTerm || selectedDepartment || selectedLocation || selectedType;
+
   return (
     <div className="bg-background py-12 md:py-20">
       <div className="container mx-auto px-4 md:px-6">
@@ -79,12 +131,84 @@ export default function CareersPage() {
         
         <section id="open-positions" className="mb-12 md:mb-20">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-10">Current Openings</h2>
-          {openPositions.length > 0 ? (
+
+          {allPositions.length > 0 && (
+            <div className="mb-8 p-6 border rounded-lg shadow-sm bg-card">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
+                <div>
+                  <Label htmlFor="search-term" className="block text-sm font-medium text-muted-foreground mb-1">Search by keyword</Label>
+                  <div className="relative">
+                    <Input
+                      id="search-term"
+                      type="text"
+                      placeholder="e.g., Engineer, Product"
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="pl-10"
+                    />
+                    <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                  </div>
+                </div>
+                <div>
+                  <Label htmlFor="department-filter" className="block text-sm font-medium text-muted-foreground mb-1">Department</Label>
+                  <Select value={selectedDepartment} onValueChange={setSelectedDepartment}>
+                    <SelectTrigger id="department-filter">
+                      <SelectValue placeholder="All Departments" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="">All Departments</SelectItem>
+                      {departments.map(dept => <SelectItem key={dept} value={dept}>{dept}</SelectItem>)}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div>
+                  <Label htmlFor="location-filter" className="block text-sm font-medium text-muted-foreground mb-1">Location</Label>
+                  <Select value={selectedLocation} onValueChange={setSelectedLocation}>
+                    <SelectTrigger id="location-filter">
+                      <SelectValue placeholder="All Locations" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="">All Locations</SelectItem>
+                      {locations.map(loc => <SelectItem key={loc} value={loc}>{loc}</SelectItem>)}
+                    </SelectContent>
+                  </Select>
+                </div>
+                <div>
+                  <Label htmlFor="type-filter" className="block text-sm font-medium text-muted-foreground mb-1">Job Type</Label>
+                  <Select value={selectedType} onValueChange={setSelectedType}>
+                    <SelectTrigger id="type-filter">
+                      <SelectValue placeholder="All Types" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="">All Types</SelectItem>
+                      {types.map(type => <SelectItem key={type} value={type}>{type}</SelectItem>)}
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+              {areFiltersActive && (
+                <div className="mt-4 flex justify-end">
+                    <Button variant="ghost" onClick={handleClearFilters} className="text-sm text-primary hover:text-accent">
+                        <ClearIcon className="mr-2 h-4 w-4" />
+                        Clear Filters
+                    </Button>
+                </div>
+              )}
+            </div>
+          )}
+
+          {filteredPositions.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {openPositions.map((position) => (
+              {filteredPositions.map((position) => (
                 <JobPositionCard key={position.id} position={position} />
               ))}
             </div>
+          ) : allPositions.length > 0 ? (
+             <div className="text-center py-10">
+                <SearchIcon className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                <p className="text-xl text-muted-foreground mb-2">No positions match your criteria.</p>
+                <p className="text-md text-muted-foreground">Try adjusting your search or filters.</p>
+             </div>
           ) : (
             <div className="text-center py-10">
               <Lightbulb className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
@@ -128,3 +252,11 @@ export default function CareersPage() {
     </div>
   );
 }
+
+// It's good practice to define metadata for pages.
+// If this component must be "use client", static metadata can be exported like this.
+// For dynamic metadata based on client state, more complex solutions are needed.
+export const metadata: Metadata = {
+  title: 'Careers at Rally Athletes',
+  description: 'Join our innovative team and help shape the future of sports technology. Explore open positions at Rally Athletes.',
+};
