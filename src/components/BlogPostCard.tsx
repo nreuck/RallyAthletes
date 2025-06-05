@@ -1,0 +1,54 @@
+// components/BlogPostCard.tsx
+import Link from 'next/link';
+import Image from 'next/image';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { CalendarDays, ArrowRight } from 'lucide-react';
+
+interface BlogPostCardProps {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  imageUrl: string;
+  imageAlt: string;
+  imageHint?: string;
+}
+
+export function BlogPostCard({ slug, title, excerpt, date, imageUrl, imageAlt, imageHint }: BlogPostCardProps) {
+  return (
+    <Card className="flex flex-col h-full overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+      <Link href={`/blog/${slug}`} className="block">
+        <div className="relative h-56 w-full">
+          <Image
+            src={imageUrl}
+            alt={imageAlt}
+            data-ai-hint={imageHint || "technology abstract"}
+            layout="fill"
+            objectFit="cover"
+            className="transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+      </Link>
+      <CardHeader>
+        <Link href={`/blog/${slug}`} className="block hover:text-primary">
+          <CardTitle className="font-headline text-xl mb-1 line-clamp-2">{title}</CardTitle>
+        </Link>
+        <div className="flex items-center text-xs text-muted-foreground">
+          <CalendarDays className="h-4 w-4 mr-1.5" />
+          {new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </div>
+      </CardHeader>
+      <CardContent className="flex-grow">
+        <CardDescription className="line-clamp-3 text-sm">{excerpt}</CardDescription>
+      </CardContent>
+      <CardFooter>
+        <Button asChild variant="link" className="p-0 text-primary hover:text-accent group">
+          <Link href={`/blog/${slug}`}>
+            Read More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </Button>
+      </CardFooter>
+    </Card>
+  );
+}
