@@ -2,7 +2,8 @@
 // components/ContactForm.tsx
 "use client";
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react'; // Changed from 'react-dom'
+import { useFormStatus } from 'react-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import type { z } from 'zod';
@@ -41,7 +42,7 @@ function SubmitButton() {
 }
 
 export function ContactForm() {
-  const [state, formAction] = useFormState(submitContactForm, initialState);
+  const [state, formAction] = useActionState(submitContactForm, initialState); // Changed to useActionState
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
@@ -131,3 +132,4 @@ export function ContactForm() {
     </Form>
   );
 }
+
