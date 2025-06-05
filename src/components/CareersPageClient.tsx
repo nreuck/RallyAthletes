@@ -8,12 +8,25 @@ import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter }
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { companyBenefits, openPositions, type JobPosition } from '@/lib/careersData';
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
 
 function JobPositionCard({ position }: { position: JobPosition }) {
+  const [formattedDate, setFormattedDate] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Perform date formatting only on the client side after hydration
+    setFormattedDate(
+      new Date(position.postedDate).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      })
+    );
+  }, [position.postedDate]);
+
   return (
     <Card className="flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
       <CardHeader>
@@ -31,7 +44,7 @@ function JobPositionCard({ position }: { position: JobPosition }) {
         </div>
         <div className="flex items-center text-sm text-muted-foreground">
           <CalendarDays className="h-4 w-4 mr-2 shrink-0" />
-          Posted: {new Date(position.postedDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          {formattedDate ? `Posted: ${formattedDate}` : 'Loading date...'}
         </div>
         <p className="text-muted-foreground text-sm line-clamp-3">{position.summary}</p>
       </CardContent>
@@ -240,4 +253,3 @@ export default function CareersPageClient() {
     </div>
   );
 }
-
