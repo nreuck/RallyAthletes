@@ -1,8 +1,10 @@
 
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import { Target, Eye, Gem, Users, Zap, ShieldCheck } from 'lucide-react'; // Gem for Values, Zap for Innovation, ShieldCheck for Integrity
+import Link from 'next/link';
+import { Target, Eye, Gem, Users, Zap, ShieldCheck, Briefcase, ArrowRight } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
   title: 'About Rally Athletes',
@@ -26,7 +28,7 @@ const values = [
     description: 'Operating with transparency, honesty, and ethical practices in all our endeavors.',
   },
   {
-    icon: Users, // Re-using Users as it's general enough for 'Community'
+    icon: Users, 
     title: 'Community',
     description: 'Building strong, supportive connections within the global sports ecosystem.',
   },
@@ -131,7 +133,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section>
+        <section className="mb-12 md:mb-16">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-10">Meet Our Leadership</h2>
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {leadershipTeam.map((leader) => (
@@ -157,9 +159,25 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <section className="py-12 md:py-16 bg-secondary rounded-lg shadow-lg">
+          <div className="container mx-auto px-4 md:px-6 text-center">
+            <Briefcase className="h-16 w-16 text-primary mx-auto mb-6" />
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">Join Our Team</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg">
+              We're always looking for passionate and talented individuals to help us shape the future of sports technology. If you're driven by innovation and want to make an impact, explore our open positions.
+            </p>
+            <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Link href="/careers">
+                View Open Positions <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <p className="text-sm text-muted-foreground mt-4">
+              (Note: This will link to a careers page, to be created separately)
+            </p>
+          </div>
+        </section>
+
       </div>
     </div>
   );
 }
-
-    
