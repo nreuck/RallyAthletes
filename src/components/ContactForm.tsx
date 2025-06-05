@@ -1,3 +1,4 @@
+
 // components/ContactForm.tsx
 "use client";
 
@@ -17,7 +18,9 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { contactFormSchema, submitContactForm, type ContactFormState } from '@/app/contact/actions';
+import { submitContactForm } from '@/app/contact/actions';
+import type { ContactFormState } from '@/app/contact/schemas';
+import { contactFormSchema } from '@/app/contact/schemas';
 import { useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
