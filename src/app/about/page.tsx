@@ -101,9 +101,17 @@ export default function AboutPage() {
               <h2 className="font-headline text-3xl font-semibold mb-4 flex items-center">
                 <Target className="w-8 h-8 mr-3 text-primary" /> Our Mission
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                At Rally Athletes, our mission is to create and unite purpose-built digital platforms that empower athletes, teams, and their support networks to achieve peak performance, seamless collaboration, and meaningful connections. Through our family of brands—ScoutMe, Fuel My Game, and My Team Dashboard—we deliver intuitive tools and data-driven insights that help athletes showcase their talents, fuel their bodies with optimal nutrition, and streamline team management. By blending innovative technology, personalized experiences, and a deep understanding of the sports ecosystem, we enable every athlete, coach, parent, and organization to focus on what truly matters: growth, teamwork, and success both on and off the field.
-              </p>
+              <div className="mb-6 space-y-4">
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  At Rally Athletes, our mission is to create and unite purpose-built digital platforms that empower athletes, teams, and their support networks to achieve peak performance, seamless collaboration, and meaningful connections.
+                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  Through our family of brands—ScoutMe, Fuel My Game, and My Team Dashboard—we deliver intuitive tools and data-driven insights that help athletes showcase their talents, fuel their bodies with optimal nutrition, and streamline team management.
+                </p>
+                <p className="text-muted-foreground text-lg leading-relaxed">
+                  By blending innovative technology, personalized experiences, and a deep understanding of the sports ecosystem, we enable every athlete, coach, parent, and organization to focus on what truly matters: growth, teamwork, and success both on and off the field.
+                </p>
+              </div>
               <h2 className="font-headline text-3xl font-semibold mb-4 flex items-center">
                 <Eye className="w-8 h-8 mr-3 text-primary" /> Our Vision
               </h2>
