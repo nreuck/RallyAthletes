@@ -1,12 +1,12 @@
 
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { mockBlogPosts, type BlogPost } from '@/lib/blogData';
 import { CalendarDays, UserCircle, ChevronRight, ArrowLeft, ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 
 interface BlogPostPageProps {
   params: { slug: string };
@@ -91,16 +91,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </header>
 
         {post.imageUrl && (
-          <div className="relative h-56 sm:h-64 md:h-96 w-full mb-8 md:mb-12 rounded-lg overflow-hidden shadow-lg">
-            <Image
-              src={post.imageUrl}
-              alt={post.imageAlt}
-              data-ai-hint={post.imageHint || "article image"}
-              layout="fill"
-              objectFit="cover"
-              priority
-            />
-          </div>
+          <ResponsiveImage
+            src={post.imageUrl}
+            alt={post.imageAlt}
+            dataAiHint={post.imageHint || "article image"}
+            priority
+            containerClassName="h-56 sm:h-64 md:h-96 w-full mb-8 md:mb-12 shadow-lg"
+          />
         )}
 
         <div className="prose prose-lg dark:prose-invert max-w-none text-foreground prose-headings:font-headline prose-headings:text-primary prose-p:text-lg prose-p:leading-relaxed prose-a:text-accent hover:prose-a:text-accent/80 prose-strong:font-semibold">

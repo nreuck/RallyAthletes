@@ -1,7 +1,6 @@
 
 "use client";
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { Briefcase, MapPin, CalendarDays, ArrowRight, Send, Lightbulb, Search as SearchIcon, X as ClearIcon } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter } from '@/components/ui/card';
@@ -12,6 +11,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 
 const ALL_DEPARTMENTS_ITEM_VALUE = "__ALL_DEPARTMENTS__";
 const ALL_LOCATIONS_ITEM_VALUE = "__ALL_LOCATIONS__";
@@ -152,7 +152,7 @@ export default function CareersPageClient() {
                       placeholder="e.g., Engineer, Product"
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="pl-10 pr-10 text-sm"
+                      className="pl-10 pr-10"
                       aria-label="Search job openings by keyword"
                     />
                     {searchTerm && (
@@ -174,7 +174,7 @@ export default function CareersPageClient() {
                     value={selectedDepartment} 
                     onValueChange={(value) => setSelectedDepartment(value === ALL_DEPARTMENTS_ITEM_VALUE ? "" : value)}
                   >
-                    <SelectTrigger id="department-filter" className="text-sm" aria-label="Filter by Department">
+                    <SelectTrigger id="department-filter" aria-label="Filter by Department">
                       <SelectValue placeholder="Filter by Department" />
                     </SelectTrigger>
                     <SelectContent>
@@ -189,7 +189,7 @@ export default function CareersPageClient() {
                     value={selectedLocation} 
                     onValueChange={(value) => setSelectedLocation(value === ALL_LOCATIONS_ITEM_VALUE ? "" : value)}
                   >
-                    <SelectTrigger id="location-filter" className="text-sm" aria-label="Filter by Location">
+                    <SelectTrigger id="location-filter" aria-label="Filter by Location">
                       <SelectValue placeholder="Filter by Location" />
                     </SelectTrigger>
                     <SelectContent>
@@ -204,7 +204,7 @@ export default function CareersPageClient() {
                     value={selectedType} 
                     onValueChange={(value) => setSelectedType(value === ALL_TYPES_ITEM_VALUE ? "" : value)}
                   >
-                    <SelectTrigger id="type-filter" className="text-sm" aria-label="Filter by Job Type">
+                    <SelectTrigger id="type-filter" aria-label="Filter by Job Type">
                       <SelectValue placeholder="Filter by Job Type" />
                     </SelectTrigger>
                     <SelectContent>
@@ -258,15 +258,12 @@ export default function CareersPageClient() {
 
         <section className="py-10 sm:py-12 md:py-16 bg-secondary rounded-lg shadow-lg">
           <div className="container mx-auto px-4 md:px-6 text-center">
-            <div className="relative h-56 sm:h-64 md:h-80 w-full max-w-3xl mx-auto mb-8 rounded-lg overflow-hidden shadow-xl">
-                <Image
-                    src="https://placehold.co/800x400.png"
-                    alt="Diverse team collaborating at Rally Athletes"
-                    data-ai-hint="team collaboration office"
-                    layout="fill"
-                    objectFit="cover"
-                />
-            </div>
+            <ResponsiveImage
+              src="https://placehold.co/800x400.png"
+              alt="Diverse team collaborating at Rally Athletes"
+              dataAiHint="team collaboration office"
+              containerClassName="h-56 sm:h-64 md:h-80 w-full max-w-3xl mx-auto mb-8 shadow-xl"
+            />
             <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Be Part of Something Bigger</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-base sm:text-lg">
               We believe in fostering a culture of innovation, collaboration, and growth. Join Rally Athletes and make a real impact on the future of sports technology.

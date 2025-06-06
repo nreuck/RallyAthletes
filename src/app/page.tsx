@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { BrandCard } from '@/components/BrandCard';
 import { Users, LayoutDashboard, Flame, Newspaper, Send, ShieldCheck } from 'lucide-react';
-import Image from 'next/image';
 import { BlogPostCard } from '@/components/BlogPostCard';
 import { mockBlogPosts } from '@/lib/blogData';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
 
 const brands = [
   {
@@ -79,22 +79,19 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
               <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Who We Are</h2>
-              <p className="text-muted-foreground mb-6 text-base sm:text-lg">
+              <p className="text-muted-foreground mb-6 text-base sm:text-lg leading-relaxed">
                 At Rally Athletes, we're fueled by innovation and a commitment to athlete success. We build specialized platforms that empower individuals and teams, helping them reach their full potential and transform their game.
               </p>
               <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
                 <Link href="/about">Discover Our Mission</Link>
               </Button>
             </div>
-            <div className="relative h-56 sm:h-64 md:h-96 rounded-lg overflow-hidden shadow-xl">
-              <Image
-                src="https://placehold.co/600x400.png"
-                alt="Team collaboration at Rally Athletes office"
-                data-ai-hint="team sports"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
+            <ResponsiveImage
+              src="https://placehold.co/600x400.png"
+              alt="Team collaboration at Rally Athletes office"
+              dataAiHint="team sports"
+              containerClassName="h-56 sm:h-64 md:h-96 shadow-xl"
+            />
           </div>
         </div>
       </section>

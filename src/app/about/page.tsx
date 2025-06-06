@@ -1,11 +1,12 @@
 
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Target, Eye, Gem, Users, Zap, ShieldCheck, Briefcase, ArrowRight, Handshake } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
+import { ResponsiveImage } from '@/components/ResponsiveImage';
+import Image from 'next/image'; // Keep for leadership team direct image usage
 
 export const metadata: Metadata = {
   title: 'About Rally Athletes',
@@ -94,15 +95,12 @@ export default function AboutPage() {
 
         <section className="mb-10 md:mb-16">
           <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
-            <div className="relative h-64 sm:h-80 md:h-[450px] rounded-lg overflow-hidden shadow-xl">
-              <Image
-                src="https://placehold.co/600x450.png"
-                alt="Rally Athletes team working collaboratively in a modern office"
-                data-ai-hint="diverse team meeting"
-                layout="fill"
-                objectFit="cover"
-              />
-            </div>
+            <ResponsiveImage
+              src="https://placehold.co/600x450.png"
+              alt="Rally Athletes team working collaboratively in a modern office"
+              dataAiHint="diverse team meeting"
+              containerClassName="h-64 sm:h-80 md:h-[450px] shadow-xl"
+            />
             <div>
               <h2 className="font-headline text-2xl sm:text-3xl font-semibold mb-4 flex items-center">
                 <Target className="w-7 h-7 sm:w-8 sm:h-8 mr-3 text-primary" /> Our Mission
@@ -126,13 +124,12 @@ export default function AboutPage() {
 
         <section className="mb-10 md:mb-16">
           <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
-            <div className="md:order-2 relative h-64 sm:h-80 md:h-[450px] rounded-lg overflow-hidden shadow-xl">
-              <Image
+            <div className="md:order-2">
+              <ResponsiveImage
                 src="https://placehold.co/600x450.png"
                 alt="Vision of future sports technology with athletes and digital interfaces"
-                data-ai-hint="future sports vision"
-                layout="fill"
-                objectFit="cover"
+                dataAiHint="future sports vision"
+                containerClassName="h-64 sm:h-80 md:h-[450px] shadow-xl"
               />
             </div>
             <div className="md:order-1">
