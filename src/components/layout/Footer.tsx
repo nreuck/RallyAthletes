@@ -12,8 +12,8 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4" aria-label="Rally Athletes Home">
               <Image 
-                src="https://placehold.co/50x50.png" 
-                alt="Rally Athletes Logo Placeholder" 
+                src="/rally-athletes-logo.png" 
+                alt="Rally Athletes Logo" 
                 width={50} 
                 height={50} 
                 className="h-6 sm:h-7 w-auto" 
