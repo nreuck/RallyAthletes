@@ -107,9 +107,25 @@ export default function AboutPage() {
               <h2 className="font-headline text-3xl font-semibold mb-4 flex items-center">
                 <Eye className="w-8 h-8 mr-3 text-primary" /> Our Vision
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                We envision a future where every athlete—regardless of age, background, or discipline—has access to a unified, intelligent ecosystem that supports their journey from grassroots to elite levels. Rally Athletes will be recognized as the premier destination for holistic athlete development, where: Talent Discovery through ScoutMe unlocks opportunities for athletes to be seen by recruiters, coaches, and programs worldwide, leveling the playing field for those who strive to go further. Personalized Nutrition via Fuel My Game evolves into an indispensable resource that adapts to each athlete’s unique needs, anticipating trends in sports science and leveraging AI to optimize performance and recovery. Effortless Team Operations powered by My Team Dashboard becomes the standard for clubs, leagues, and organizations to coordinate schedules, communications, and facilities without friction, so coaches and administrators can focus on strategy and development. By seamlessly integrating our brands under the Rally Athletes umbrella, we will pioneer a connected sports ecosystem—one that anticipates the needs of tomorrow’s athletes, fuels their passion today, and galvanizes communities around shared goals. We aim to inspire a global movement in which data-informed decisions, equitable access, and collaboration drive the next generation of sporting excellence.
-              </p>
+              <div className="text-muted-foreground text-lg leading-relaxed space-y-4">
+                <p>
+                  We envision a future where every athlete—regardless of age, background, or discipline—has access to a unified, intelligent ecosystem that supports their journey from grassroots to elite levels. Rally Athletes will be recognized as the premier destination for holistic athlete development, where:
+                </p>
+                <ul className="list-disc list-inside space-y-2 pl-4">
+                  <li>
+                    <strong>Talent Discovery through ScoutMe</strong> unlocks opportunities for athletes to be seen by recruiters, coaches, and programs worldwide, leveling the playing field for those who strive to go further.
+                  </li>
+                  <li>
+                    <strong>Personalized Nutrition via Fuel My Game</strong> evolves into an indispensable resource that adapts to each athlete’s unique needs, anticipating trends in sports science and leveraging AI to optimize performance and recovery.
+                  </li>
+                  <li>
+                    <strong>Effortless Team Operations powered by My Team Dashboard</strong> becomes the standard for clubs, leagues, and organizations to coordinate schedules, communications, and facilities without friction, so coaches and administrators can focus on strategy and development.
+                  </li>
+                </ul>
+                <p>
+                  By seamlessly integrating our brands under the Rally Athletes umbrella, we will pioneer a connected sports ecosystem—one that anticipates the needs of tomorrow’s athletes, fuels their passion today, and galvanizes communities around shared goals. We aim to inspire a global movement in which data-informed decisions, equitable access, and collaboration drive the next generation of sporting excellence.
+                </p>
+              </div>
             </div>
           </div>
         </section>
