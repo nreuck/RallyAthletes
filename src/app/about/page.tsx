@@ -82,7 +82,7 @@ export default function AboutPage() {
         <header className="text-center mb-12 md:mb-16">
           <h1 className="font-headline text-4xl md:text-5xl font-bold text-primary mb-4">About Rally Athletes</h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            We are dedicated to revolutionizing the sports landscape through innovative technology and unwavering commitment to athlete success.
+            Pioneering the future of sports with innovative technology and an unwavering commitment to empowering every athlete to achieve their best.
           </p>
         </header>
 
