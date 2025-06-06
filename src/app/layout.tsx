@@ -5,6 +5,7 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/toaster';
 import { Inter as FontInter, PT_Sans as FontPTSans } from 'next/font/google';
+import { FirebaseAnalyticsInitializer } from '@/components/FirebaseAnalyticsInitializer';
 
 const fontInter = FontInter({ 
   subsets: ['latin'],
@@ -78,6 +79,7 @@ export default function RootLayout({
         {/* Google Fonts preconnects are no longer needed when using next/font */}
       </head>
       <body className="font-body antialiased flex flex-col min-h-screen">
+        <FirebaseAnalyticsInitializer />
         <Navbar />
         <main className="flex-grow">
           {children}
