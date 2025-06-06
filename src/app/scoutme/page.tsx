@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Learn more about ScoutMe Sports, a Rally Athletes brand dedicated to helping athletes get discovered.',
 };
 
-export default function ScoutMePage() {
+export default function ScoutMeSportsPage() {
   return (
     <div className="bg-background py-12 md:py-20">
       <div className="container mx-auto px-4 md:px-6">
@@ -56,7 +56,7 @@ export default function ScoutMePage() {
               <div className="pt-4">
                 <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
                   <Link href="/contact">
-                    Learn More or Get Started
+                    Learn More & Get Started
                   </Link>
                 </Button>
               </div>

@@ -13,13 +13,14 @@ interface BlogPostCardProps {
   imageUrl: string;
   imageAlt: string;
   imageHint?: string;
+  tags?: string[];
 }
 
 export function BlogPostCard({ slug, title, excerpt, date, imageUrl, imageAlt, imageHint }: BlogPostCardProps) {
   return (
-    <Card className="flex flex-col h-full overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+    <Card className="group flex flex-col h-full overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
       <Link href={`/blog/${slug}`} className="block">
-        <div className="relative h-56 w-full">
+        <div className="relative h-56 w-full overflow-hidden"> {/* Added overflow-hidden here */}
           <Image
             src={imageUrl}
             alt={imageAlt}

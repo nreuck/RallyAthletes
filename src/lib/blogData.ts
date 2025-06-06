@@ -59,7 +59,7 @@ export const mockBlogPosts: BlogPost[] = [
     imageUrl: 'https://placehold.co/1200x630.png',
     imageAlt: 'Dashboard interface showing athlete stats',
     imageHint: 'dashboard analytics',
-    tags: ['My Team Dashboard', 'Coaching', 'Performance'],
+    tags: ['My Team Dashboard', 'Coaching', 'Performance', 'Team Management'],
     content: {
       introduction: "My Team Dashboard is more than just a management tool; it's a catalyst for growth. By providing coaches and athletes with a centralized platform for communication, scheduling, and performance analysis, we're helping teams unlock their true potential.",
       sections: [
@@ -87,7 +87,7 @@ export const mockBlogPosts: BlogPost[] = [
     imageUrl: 'https://placehold.co/1200x630.png',
     imageAlt: 'Healthy food and sports equipment',
     imageHint: 'healthy food sports',
-    tags: ['Fuel My Game', 'Nutrition', 'Athlete Health'],
+    tags: ['Fuel My Game', 'Nutrition', 'Athlete Health', 'Performance Diet'],
     content: {
       introduction: "Nutrition is a cornerstone of athletic performance. Fuel My Game is designed to take the guesswork out of athlete nutrition, providing personalized plans, educational resources, and tools to help athletes make informed choices that support their training and competition goals.",
       sections: [
@@ -115,7 +115,7 @@ export const mockBlogPosts: BlogPost[] = [
     imageUrl: 'https://placehold.co/1200x630.png',
     imageAlt: 'Athlete performing in front of scouts',
     imageHint: 'athlete scouting',
-    tags: ['ScoutMe Sports', 'Scouting', 'Athlete Recruitment'],
+    tags: ['ScoutMe Sports', 'Scouting', 'Athlete Recruitment', 'Talent Discovery'],
     content: {
       introduction: "For many talented athletes, getting noticed by scouts and securing professional opportunities can be a major hurdle. ScoutMe Sports is dedicated to breaking down these barriers, creating a transparent and efficient platform for talent discovery and recruitment.",
       sections: [
@@ -125,7 +125,7 @@ export const mockBlogPosts: BlogPost[] = [
         },
         {
           heading: "Advanced Scouting Tools",
-          paragraph: "Scouts and organizations gain access to a powerful database of athletes, with advanced search filters and analytics to identify players اللي match their specific criteria. Our platform streamlines the scouting process, saving time and resources."
+          paragraph: "Scouts and organizations gain access to a powerful database of athletes, with advanced search filters and analytics to identify players that match their specific criteria. Our platform streamlines the scouting process, saving time and resources."
         },
         {
           heading: "Building Connections",

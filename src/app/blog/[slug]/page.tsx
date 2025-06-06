@@ -59,7 +59,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
         <header className="mb-8 md:mb-12">
           <h1 className="font-headline text-3xl md:text-5xl font-bold text-primary mb-4">{post.title}</h1>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-muted-foreground text-sm">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-muted-foreground text-sm mb-4">
             <div className="flex items-center">
               <CalendarDays className="h-4 w-4 mr-1.5" />
               {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
@@ -70,7 +70,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </div>
           {post.tags && post.tags.length > 0 && (
-             <div className="mt-4 flex flex-wrap gap-2">
+             <div className="flex flex-wrap gap-2">
               {post.tags.map(tag => (
                 <Badge key={tag} variant="secondary">{tag}</Badge>
               ))}

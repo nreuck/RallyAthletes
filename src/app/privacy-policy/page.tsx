@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <div className="bg-background py-12 md:py-20">
-      <div className="container mx-auto px-4 md:px-6 max-w-3xl">
+      <div className="container mx-auto px-4 md:px-6 max-w-4xl"> {/* Changed max-w-3xl to max-w-4xl */}
         <div className="mb-8">
           <Button variant="outline" asChild>
             <Link href="/">
@@ -82,7 +82,7 @@ export default function PrivacyPolicyPage() {
 
           <h3 className="font-headline text-xl md:text-2xl mt-6 mb-3">2.3. Information from Third Parties & Publicly Available Sources</h3>
           <p><strong>Third-Party APIs & Integrations</strong></p>
-          <h4>ScoutMe Sports</h4>
+          <h4 className="font-headline text-lg mt-4 mb-2">ScoutMe Sports</h4>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>UI Avatars API (generates default avatars if you don’t upload a photo)</li>
             <li>Unsplash API (provides default banner images)</li>
@@ -91,14 +91,14 @@ export default function PrivacyPolicyPage() {
             <li>HUDL, YouTube, Trace, Veo (mocked connections) for video hub</li>
             <li>Third-party social networks (YouTube, Instagram, X, TikTok, HUDL) for pulling link previews or feed snippets if you connect your accounts</li>
           </ul>
-          <h4>Fuel My Game</h4>
+          <h4 className="font-headline text-lg mt-4 mb-2">Fuel My Game</h4>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>USDA FoodData Central API (for nutritional facts of raw ingredients)</li>
             <li>Open Food Facts, UPCitemdb.com (for barcode lookups of packaged foods)</li>
             <li>TheMealDB API (for recipe search by name, ingredient, category, area)</li>
             <li>Genkit AI (for personalized food recommendations)</li>
           </ul>
-          <h4>My Team Dashboard</h4>
+          <h4 className="font-headline text-lg mt-4 mb-2">My Team Dashboard</h4>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>Firebase (authentication, real-time database, Firestore, hosting, storage)</li>
             <li>Firebase Cloud Messaging (for push notifications)</li>
@@ -227,7 +227,7 @@ export default function PrivacyPolicyPage() {
           <h3 className="font-headline text-xl md:text-2xl mt-6 mb-3">8.4. Do Not Sell or Share My Personal Information (for California Residents)</h3>
           <p>Under the California Consumer Privacy Act (CCPA), California residents have the right to:</p>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
-            <li>Request that we disclose the categories and specific pieces of personal information we’ve collected about them.</li>
+            <li>Request that we disclose the categories and specific pieces of personal information we’vecollected about them.</li>
             <li>Request deletion of personal information we hold, subject to certain exceptions.</li>
             <li>Opt out of the sale or sharing of their personal information. We do not sell your personal data for monetary consideration. However, we do share data with service providers to perform essential business functions. To exercise CCPA rights, please contact us at privacy@rallyathletes.com.</li>
           </ul>
@@ -290,4 +290,3 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
-
