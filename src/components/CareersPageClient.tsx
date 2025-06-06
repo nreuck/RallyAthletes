@@ -13,6 +13,10 @@ import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
 
+const ALL_DEPARTMENTS_ITEM_VALUE = "__ALL_DEPARTMENTS__";
+const ALL_LOCATIONS_ITEM_VALUE = "__ALL_LOCATIONS__";
+const ALL_TYPES_ITEM_VALUE = "__ALL_TYPES__";
+
 function JobPositionCard({ position }: { position: JobPosition }) {
   const [formattedDate, setFormattedDate] = useState<string | null>(null);
 
@@ -152,36 +156,45 @@ export default function CareersPageClient() {
                 </div>
                 <div>
                   <Label htmlFor="department-filter" className="block text-sm font-medium text-muted-foreground mb-1">Department</Label>
-                  <Select value={selectedDepartment} onValueChange={setSelectedDepartment}>
+                  <Select 
+                    value={selectedDepartment} 
+                    onValueChange={(value) => setSelectedDepartment(value === ALL_DEPARTMENTS_ITEM_VALUE ? "" : value)}
+                  >
                     <SelectTrigger id="department-filter">
                       <SelectValue placeholder="All Departments" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">All Departments</SelectItem>
+                      <SelectItem value={ALL_DEPARTMENTS_ITEM_VALUE}>All Departments</SelectItem>
                       {departments.map(dept => <SelectItem key={dept} value={dept}>{dept}</SelectItem>)}
                     </SelectContent>
                   </Select>
                 </div>
                 <div>
                   <Label htmlFor="location-filter" className="block text-sm font-medium text-muted-foreground mb-1">Location</Label>
-                  <Select value={selectedLocation} onValueChange={setSelectedLocation}>
+                  <Select 
+                    value={selectedLocation} 
+                    onValueChange={(value) => setSelectedLocation(value === ALL_LOCATIONS_ITEM_VALUE ? "" : value)}
+                  >
                     <SelectTrigger id="location-filter">
                       <SelectValue placeholder="All Locations" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">All Locations</SelectItem>
+                      <SelectItem value={ALL_LOCATIONS_ITEM_VALUE}>All Locations</SelectItem>
                       {locations.map(loc => <SelectItem key={loc} value={loc}>{loc}</SelectItem>)}
                     </SelectContent>
                   </Select>
                 </div>
                 <div>
                   <Label htmlFor="type-filter" className="block text-sm font-medium text-muted-foreground mb-1">Job Type</Label>
-                  <Select value={selectedType} onValueChange={setSelectedType}>
+                  <Select 
+                    value={selectedType} 
+                    onValueChange={(value) => setSelectedType(value === ALL_TYPES_ITEM_VALUE ? "" : value)}
+                  >
                     <SelectTrigger id="type-filter">
                       <SelectValue placeholder="All Types" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">All Types</SelectItem>
+                      <SelectItem value={ALL_TYPES_ITEM_VALUE}>All Types</SelectItem>
                       {types.map(type => <SelectItem key={type} value={type}>{type}</SelectItem>)}
                     </SelectContent>
                   </Select>
@@ -253,3 +266,4 @@ export default function CareersPageClient() {
     </div>
   );
 }
+
