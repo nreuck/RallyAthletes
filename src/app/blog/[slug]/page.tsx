@@ -4,14 +4,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { mockBlogPosts, type BlogPost } from '@/lib/blogData';
-import { CalendarDays, UserCircle, ChevronRight } from 'lucide-react';
+import { CalendarDays, UserCircle, ChevronRight, ArrowLeft, ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 
 interface BlogPostPageProps {
   params: { slug: string };
 }
 
-// Function to fetch post data (mocked)
 async function getPostBySlug(slug: string): Promise<BlogPost | undefined> {
   return mockBlogPosts.find((post) => post.slug === slug);
 }
@@ -50,11 +50,15 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = await getPostBySlug(params.slug);
+  const postIndex = mockBlogPosts.findIndex((p) => p.slug === params.slug);
+  const post = mockBlogPosts[postIndex];
 
   if (!post) {
     notFound();
   }
+
+  const previousPost = postIndex > 0 ? mockBlogPosts[postIndex - 1] : null;
+  const nextPost = postIndex < mockBlogPosts.length - 1 ? mockBlogPosts[postIndex + 1] : null;
 
   return (
     <article className="bg-background py-12 md:py-20">
@@ -112,6 +116,31 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           <h3 className="font-headline text-xl md:text-2xl mt-8 mb-4">Conclusion</h3>
           <p>{post.content.conclusion}</p>
         </div>
+
+        <nav className="mt-12 md:mt-16 pt-8 border-t flex flex-col sm:flex-row justify-between gap-4">
+          {previousPost ? (
+            <Button variant="outline" asChild>
+              <Link href={`/blog/${previousPost.slug}`} className="flex items-center group">
+                <ArrowLeft className="h-4 w-4 mr-2 transition-transform group-hover:-translate-x-1" />
+                <div>
+                  <span className="text-xs text-muted-foreground">Previous Post</span>
+                  <p className="font-medium line-clamp-1">{previousPost.title}</p>
+                </div>
+              </Link>
+            </Button>
+          ) : <div />} 
+          {nextPost ? (
+            <Button variant="outline" asChild>
+              <Link href={`/blog/${nextPost.slug}`} className="flex items-center text-right group">
+                 <div>
+                  <span className="text-xs text-muted-foreground">Next Post</span>
+                  <p className="font-medium line-clamp-1">{nextPost.title}</p>
+                </div>
+                <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
+          ) : <div />}
+        </nav>
       </div>
     </article>
   );

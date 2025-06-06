@@ -17,9 +17,10 @@ interface BlogPostCardProps {
   imageAlt: string;
   imageHint?: string;
   tags?: string[];
+  isPriority?: boolean;
 }
 
-export function BlogPostCard({ slug, title, excerpt, date, imageUrl, imageAlt, imageHint, tags }: BlogPostCardProps) {
+export function BlogPostCard({ slug, title, excerpt, date, imageUrl, imageAlt, imageHint, tags, isPriority = false }: BlogPostCardProps) {
   return (
     <Card className="group flex flex-col h-full overflow-hidden transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
       <Link href={`/blog/${slug}`} className="block">
@@ -31,6 +32,7 @@ export function BlogPostCard({ slug, title, excerpt, date, imageUrl, imageAlt, i
             layout="fill"
             objectFit="cover"
             className="transition-transform duration-300 group-hover:scale-105"
+            priority={isPriority}
           />
         </div>
       </Link>

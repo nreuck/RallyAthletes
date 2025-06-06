@@ -21,7 +21,6 @@ function JobPositionCard({ position }: { position: JobPosition }) {
   const [formattedDate, setFormattedDate] = useState<string | null>(null);
 
   useEffect(() => {
-    // Perform date formatting only on the client side after hydration
     setFormattedDate(
       new Date(position.postedDate).toLocaleDateString('en-US', {
         year: 'numeric',
@@ -146,15 +145,26 @@ export default function CareersPageClient() {
                 <div>
                   <Label htmlFor="search-term" className="block text-sm font-medium text-muted-foreground mb-1">Search by keyword</Label>
                   <div className="relative">
+                    <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground pointer-events-none" />
                     <Input
                       id="search-term"
                       type="text"
                       placeholder="e.g., Engineer, Product"
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="pl-10"
+                      className="pl-10 pr-10" // Added pr-10 for clear icon
                     />
-                    <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                    {searchTerm && (
+                      <Button
+                        variant="ghost"
+                        size="icon"
+                        className="absolute right-2 top-1/2 -translate-y-1/2 h-7 w-7 text-muted-foreground hover:text-foreground"
+                        onClick={() => setSearchTerm('')}
+                        aria-label="Clear search term"
+                      >
+                        <ClearIcon className="h-4 w-4" />
+                      </Button>
+                    )}
                   </div>
                 </div>
                 <div>

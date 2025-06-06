@@ -113,7 +113,7 @@ export default function HomePage() {
           </div>
           {latestPosts.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {latestPosts.map((post) => (
+              {latestPosts.map((post, index) => (
                 <BlogPostCard
                   key={post.slug}
                   slug={post.slug}
@@ -124,6 +124,7 @@ export default function HomePage() {
                   imageAlt={post.imageAlt}
                   imageHint={post.imageHint}
                   tags={post.tags}
+                  isPriority={index < 3} // Prioritize images for the latest posts shown on homepage
                 />
               ))}
             </div>
@@ -148,7 +149,7 @@ export default function HomePage() {
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
             Have questions or want to learn more about Rally Athletes? We’d love to hear from you.
           </p>
-          <Button size="lg" variant="outline" asChild className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
+          <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
             <Link href="/contact">Contact Us</Link>
           </Button>
         </div>

@@ -31,11 +31,10 @@ export function Navbar() {
   const closeSheet = () => setIsSheetOpen(false);
 
   if (!isMounted) {
-    // Render a basic structure or null to avoid hydration mismatch during SSR/first render
     return (
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2" aria-label="Rally Athletes Home">
             <ShieldCheck className="h-7 w-7 text-primary" />
             <span className="font-headline text-xl font-semibold">Rally Athletes</span>
           </Link>

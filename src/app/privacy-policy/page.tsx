@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
              <FileText className="h-10 w-10 text-primary mr-3" />
              <h1 className="font-headline text-3xl md:text-4xl font-bold text-primary">Privacy Policy</h1>
           </div>
-          <p className="text-muted-foreground text-sm">Last updated: June 6, 2025</p>
+          <p className="text-sm text-muted-foreground/80">Last updated: June 6, 2025</p>
         </header>
 
         <article className="prose prose-lg dark:prose-invert max-w-none text-foreground prose-headings:font-headline prose-headings:text-primary prose-p:text-lg prose-p:leading-relaxed prose-a:text-accent hover:prose-a:text-accent/80 prose-strong:font-semibold">
@@ -283,7 +283,6 @@ export default function PrivacyPolicyPage() {
                 United States
             </li>
           </ul>
-          <p>We will respond to your inquiry within 30 days of receipt.</p>
           <p>Thank you for trusting Rally Athletes with your personal information. We are committed to safeguarding your privacy and delivering a secure, transparent, and user-centered experience across all our brands.</p>
         </article>
       </div>

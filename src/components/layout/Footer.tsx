@@ -18,8 +18,8 @@ export function Footer() {
             </p>
           </div>
           <div className="md:col-span-1">
-            <h3 className="font-headline text-lg font-semibold mb-3">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 id="quick-links-heading" className="font-headline text-lg font-semibold mb-3">Quick Links</h3>
+            <ul className="space-y-2" aria-labelledby="quick-links-heading">
               <li><Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
               <li><Link href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
               <li><Link href="/careers" className="text-sm text-muted-foreground hover:text-primary transition-colors">Careers</Link></li>

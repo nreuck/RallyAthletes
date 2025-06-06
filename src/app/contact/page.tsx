@@ -51,7 +51,10 @@ export default function ContactPage() {
               <div className="flex items-start space-x-4">
                 <MapPin className="h-6 w-6 text-primary mt-1 shrink-0" />
                 <div>
-                  <h3 className="font-semibold text-lg">Office Address</h3>
+                  <h3 className="font-semibold text-lg flex items-center">
+                     <MapPin className="h-5 w-5 text-primary mr-2 inline-block md:hidden" /> {/* Hidden on md+ to avoid duplication if styles put it there */}
+                    Office Address
+                  </h3>
                   <p className="text-muted-foreground">123 Sports Tech Avenue, Innovation City, ST 54321</p>
                   <p className="text-sm text-muted-foreground/80">Visits by appointment only</p>
                 </div>
