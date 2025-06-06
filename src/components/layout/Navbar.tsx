@@ -55,10 +55,10 @@ export function Navbar() {
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2" onClick={closeSheet} aria-label="Rally Athletes Home">
           <Image 
-            src="/rally-athletes-logo.png" 
-            alt="Rally Athletes Logo" 
-            width={50} 
-            height={50} 
+            src="/rally-athletes-og-image.png" 
+            alt="Rally Athletes Site Logo" 
+            width={120} 
+            height={63} 
             className="h-6 sm:h-7 w-auto" 
             priority
           />
@@ -89,14 +89,14 @@ export function Navbar() {
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[260px] sm:w-[300px]">
+            <SheetContent side="right" className="w-[240px] sm:w-[280px]">
               <div className="p-4">
                 <Link href="/" className="flex items-center gap-2 mb-8" onClick={closeSheet} aria-label="Rally Athletes Home">
                   <Image 
-                    src="/rally-athletes-logo.png" 
-                    alt="Rally Athletes Logo" 
-                    width={50} 
-                    height={50} 
+                    src="/rally-athletes-og-image.png" 
+                    alt="Rally Athletes Site Logo" 
+                    width={120} 
+                    height={63} 
                     className="h-7 w-auto" 
                   />
                   <span className="font-headline text-xl font-semibold">Rally Athletes</span>
@@ -108,7 +108,7 @@ export function Navbar() {
                       href={link.href}
                       onClick={closeSheet}
                       className={cn(
-                        "text-base font-medium transition-colors hover:text-primary py-2",
+                        "text-sm font-medium transition-colors hover:text-primary py-2",
                         pathname === link.href ? "text-primary font-semibold" : "text-foreground"
                       )}
                       aria-current={pathname === link.href ? "page" : undefined}
