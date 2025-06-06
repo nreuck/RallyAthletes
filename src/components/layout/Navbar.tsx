@@ -37,7 +37,7 @@ export function Navbar() {
         <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 sm:px-6">
           <Link href="/" className="flex items-center gap-2" aria-label="Rally Athletes Home">
             {/* Placeholder for logo before mount */}
-            <div className="h-6 sm:h-7 w-auto bg-primary/20 rounded"></div>
+            <div className="h-8 sm:h-10 w-auto bg-primary/20 rounded"></div>
           </Link>
           <div className="md:hidden">
             <Button variant="ghost" size="icon" disabled>
@@ -58,7 +58,7 @@ export function Navbar() {
             alt="Rally Athletes Site Logo" 
             width={120} 
             height={63} 
-            className="h-6 sm:h-7 w-auto" 
+            className="h-8 sm:h-10 w-auto" 
             priority
           />
         </Link>
@@ -95,7 +95,7 @@ export function Navbar() {
                     alt="Rally Athletes Site Logo" 
                     width={120} 
                     height={63} 
-                    className="h-7 w-auto" 
+                    className="h-8 sm:h-10 w-auto"
                   />
                 </Link>
                 <nav className="flex flex-col gap-3" aria-label="Mobile Navigation">
