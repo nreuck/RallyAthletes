@@ -4,7 +4,6 @@ import type {Config} from 'tailwindcss';
 export default {
   darkMode: ['class'],
   content: [
-    // Removed './src/pages/**/*.{js,ts,jsx,tsx,mdx}' as project uses App Router
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
@@ -19,7 +18,7 @@ export default {
     extend: {
       fontFamily: {
         headline: ['var(--font-inter)', 'sans-serif'],
-        body: ['var(--font-pt-sans)', 'sans-serif'], // Updated to use PT Sans for body
+        body: ['var(--font-pt-sans)', 'sans-serif'],
         code: ['monospace', 'monospace'],
       },
       colors: {
@@ -120,9 +119,9 @@ export default {
             '--tw-prose-pre-bg': theme('colors.secondary.DEFAULT'),
             '--tw-prose-th-borders': theme('colors.border'),
             '--tw-prose-td-borders': theme('colors.border'),
-            '--tw-prose-invert-body': theme('colors.background'), // Example for dark mode if needed
+            '--tw-prose-invert-body': theme('colors.background'), 
             '--tw-prose-invert-headings': theme('colors.primary.DEFAULT'),
-            // Add more prose customizations here
+            
             'h1, h2, h3, h4, h5, h6': {
               fontFamily: theme('fontFamily.headline').join(', '),
               color: 'hsl(var(--primary))',

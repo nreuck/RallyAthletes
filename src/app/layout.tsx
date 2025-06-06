@@ -4,7 +4,7 @@ import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/toaster';
-import { Inter as FontInter, PT_Sans as FontPTSans } from 'next/font/google'; // Updated import
+import { Inter as FontInter, PT_Sans as FontPTSans } from 'next/font/google';
 
 const fontInter = FontInter({ 
   subsets: ['latin'],
@@ -20,7 +20,6 @@ const fontPTSans = FontPTSans({
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rallyathletes.com';
-const defaultOgImage = `${siteUrl}/og-default.png`; // User should replace with an actual image in /public
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -29,7 +28,7 @@ export const metadata: Metadata = {
     template: '%s | Rally Athletes',
   },
   description: 'Central hub for Rally Athletes brands: ScoutMe Sports, My Team Dashboard, and Fuel My Game. Discover our mission to empower athletes and sports organizations.',
-  keywords: ['Rally Athletes', 'ScoutMe Sports', 'My Team Dashboard', 'Fuel My Game', 'sports technology', 'athlete empowerment', 'sports platform', 'athletic development', 'sports software'],
+  keywords: ['Rally Athletes', 'ScoutMe Sports', 'My Team Dashboard', 'Fuel My Game', 'sports technology', 'athlete empowerment', 'sports platform', 'athletic development', 'sports software', 'youth sports', 'coach tools', 'athlete nutrition'],
   openGraph: {
     title: {
       default: 'Rally Athletes - Powering Athletes, Uniting Brands',
@@ -40,10 +39,10 @@ export const metadata: Metadata = {
     siteName: 'Rally Athletes',
     images: [
       {
-        url: 'https://placehold.co/1200x630/EBF4F7/2E9CCA.png?text=Rally+Athletes', // Default OG Image
+        url: 'https://placehold.co/1200x630.png', // Default OG Image - simplified
         width: 1200,
         height: 630,
-        alt: 'Rally Athletes Logo Banner',
+        alt: 'Rally Athletes Logo Banner', // Updated alt text
       },
     ],
     locale: 'en_US',
@@ -56,12 +55,12 @@ export const metadata: Metadata = {
       template: '%s | Rally Athletes',
     },
     description: 'Central hub for Rally Athletes brands: ScoutMe Sports, My Team Dashboard, and Fuel My Game.',
-    images: ['https://placehold.co/1200x630/EBF4F7/2E9CCA.png?text=Rally+Athletes'], // Default Twitter Image
+    images: ['https://placehold.co/1200x630.png'], // Default Twitter Image - simplified
     // site: '@RallyAthletes', // Optional: Add your Twitter handle
     // creator: '@RallyAthletes', // Optional: Add your Twitter handle
   },
   // manifest: '/site.webmanifest', // If you have one
-  // icons: { // Already present, good
+  // icons: { 
   //   icon: '/favicon.ico',
   //   apple: '/apple-touch-icon.png',
   // },

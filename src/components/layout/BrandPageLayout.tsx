@@ -5,13 +5,13 @@ import { ArrowLeft, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
+import React from 'react';
 
 interface BrandPageLayoutProps {
   brandIcon: React.ReactElement; // Expecting a Lucide icon component instance e.g. <Users />
   brandName: string;
   brandSlogan: string;
-  pageTitle: string;
-  pageDescription: string;
+  // pageTitle and pageDescription removed as metadata is handled by individual pages
   mainImageSrc: string;
   mainImageAlt: string;
   mainImageDataAiHint: string;
@@ -19,14 +19,6 @@ interface BrandPageLayoutProps {
   introductionParagraphs: string[];
   ctaLink: string;
   ctaText: string;
-}
-
-// Helper function to generate metadata
-export async function generateBrandPageMetadata({ title, description }: { title: string, description: string }): Promise<Metadata> {
-  return {
-    title: title,
-    description: description,
-  };
 }
 
 export function BrandPageLayout({
