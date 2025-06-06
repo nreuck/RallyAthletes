@@ -2,7 +2,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Target, Eye, Gem, Users, Zap, ShieldCheck, Briefcase, ArrowRight } from 'lucide-react';
+import { Target, Eye, Gem, Users, Zap, ShieldCheck, Briefcase, ArrowRight, Handshake } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -28,7 +28,7 @@ const values = [
     description: 'Operating with transparency, honesty, and ethical practices in all our endeavors.',
   },
   {
-    icon: Users,
+    icon: Handshake,
     title: 'Community',
     description: 'Building strong, supportive connections within the global sports ecosystem.',
   },

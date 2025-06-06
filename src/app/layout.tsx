@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Menu, Newspaper, Users, Flame, LayoutDashboard, ShieldCheck } from 'lucide-react';
 import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
