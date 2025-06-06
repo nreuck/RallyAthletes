@@ -82,7 +82,7 @@ export default function PrivacyPolicyPage() {
 
           <h3 className="font-headline text-xl md:text-2xl mt-6 mb-3">2.3. Information from Third Parties & Publicly Available Sources</h3>
           <p><strong>Third-Party APIs & Integrations</strong></p>
-          <p>ScoutMeSports</p>
+          <h4>ScoutMeSports</h4>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>UI Avatars API (generates default avatars if you don’t upload a photo)</li>
             <li>Unsplash API (provides default banner images)</li>
@@ -91,14 +91,14 @@ export default function PrivacyPolicyPage() {
             <li>HUDL, YouTube, Trace, Veo (mocked connections) for video hub</li>
             <li>Third-party social networks (YouTube, Instagram, X, TikTok, HUDL) for pulling link previews or feed snippets if you connect your accounts</li>
           </ul>
-          <p>Fuel My Game</p>
+          <h4>Fuel My Game</h4>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>USDA FoodData Central API (for nutritional facts of raw ingredients)</li>
             <li>Open Food Facts, UPCitemdb.com (for barcode lookups of packaged foods)</li>
             <li>TheMealDB API (for recipe search by name, ingredient, category, area)</li>
             <li>Genkit AI (for personalized food recommendations)</li>
           </ul>
-          <p>My Team Dashboard</p>
+          <h4>My Team Dashboard</h4>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>Firebase (authentication, real-time database, Firestore, hosting, storage)</li>
             <li>Firebase Cloud Messaging (for push notifications)</li>
@@ -269,7 +269,7 @@ export default function PrivacyPolicyPage() {
           <p>Similarly, if you click on ads or promotional links displayed on our sites, the advertiser’s privacy practices will govern the data collected.</p>
 
           <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">13. Changes to This Privacy Policy</h2>
-          <p>We may revise this Privacy Policy as our Service evolves or in response to changes in applicable laws, regulations, or industry standards. When we update this policy, we will revise the “Last updated” date at the top and, if the changes are material, provide a notice (e.g., banner on our homepage or notification email) at least 30 days before they take effect. We encourage you to review this Privacy Policy periodically to stay informed about how we collect, use, and share your information. Your continued use of the Service after the revised Privacy Policy becomes effective signifies your acceptance of the changes.</p>
+          <p>We may revise this Privacy Policy as our Service evolves or in response to changes in applicable laws, regulations, or industry standards. When we update this policy, we will revise the “Last updated” date at the top and, if the changes are material, provide a notice (e.g., banner on our homepage or notification email) at least 30 days before they take effect. We encourage you to review this Privacy Policy periodically to stay informed about how we collect, use, and share your information. Your continued use of rallies after the revised Privacy Policy becomes effective signifies your acceptance of the changes.</p>
 
           <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">14. Contact Us</h2>
           <p>If you have questions or concerns about this Privacy Policy, your personal information, or our privacy practices, you can contact us by:</p>
@@ -290,3 +290,5 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
+
+    
