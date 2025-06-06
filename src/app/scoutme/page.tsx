@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -39,7 +40,10 @@ export default function ScoutMeSportsPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground text-lg">
-                ScoutMe Sports, a premier brand under the Rally Athletes umbrella, is dedicated to bridging the gap between aspiring athletes and professional scouting networks. We provide a dynamic platform where athletes can showcase their talents, achievements, and potential to a global audience of scouts, coaches, and recruiters.
+                ScoutMe Sports, a premier brand within the Rally Athletes family, is engineered to dismantle the barriers between promising athletes and the professional scouting world. Our dynamic, global platform empowers athletes to present their unique talents, verified achievements, and future potential to an extensive network of collegiate coaches, professional scouts, and international recruiters.
+              </p>
+              <p className="text-muted-foreground text-lg">
+                Athletes can build comprehensive, multimedia-rich profiles—complete with verified statistics, academic records, compelling highlight reels, and personal statements. This allows them to take control of their recruitment narrative, ensuring their skills and dedication are visible to decision-makers far beyond their local reach. ScoutMe Sports provides the tools to shine a spotlight on every aspect of an athlete's journey and aspirations.
               </p>
               <div className="relative h-64 md:h-96 w-full my-6 rounded-lg overflow-hidden shadow-md">
                 <Image
@@ -51,7 +55,10 @@ export default function ScoutMeSportsPage() {
                 />
               </div>
               <p className="text-muted-foreground text-lg">
-                Our innovative tools and comprehensive athlete profiles make it easier than ever for talent to be discovered and for organizations to find the perfect fit for their teams. Whether you're an emerging athlete aiming for the next level or a scout looking for hidden gems, ScoutMe Sports is your ultimate resource.
+                For scouts, coaches, and organizations, ScoutMe Sports offers an unparalleled talent discovery engine. Our platform provides advanced search filters, verified data points, and direct communication channels, streamlining the often complex and time-consuming process of identifying and evaluating prospective talent. Find the perfect fit for your program with greater efficiency and confidence, tapping into a diverse pool of aspiring athletes.
+              </p>
+               <p className="text-muted-foreground text-lg">
+                By seamlessly connecting these two crucial sides of the sports ecosystem, ScoutMe Sports revolutionizes talent identification. Whether you're an up-and-coming athlete ready to make your mark, or a recruitment professional searching for the next generation of stars, ScoutMe Sports is the definitive resource to turn potential into opportunity.
               </p>
               <div className="pt-4">
                 <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
