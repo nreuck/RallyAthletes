@@ -152,7 +152,8 @@ export default function CareersPageClient() {
                       placeholder="e.g., Engineer, Product"
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="pl-10 pr-10 text-sm sm:text-base"
+                      className="pl-10 pr-10 text-sm"
+                      aria-label="Search job openings by keyword"
                     />
                     {searchTerm && (
                       <Button
@@ -173,7 +174,7 @@ export default function CareersPageClient() {
                     value={selectedDepartment} 
                     onValueChange={(value) => setSelectedDepartment(value === ALL_DEPARTMENTS_ITEM_VALUE ? "" : value)}
                   >
-                    <SelectTrigger id="department-filter" className="text-sm sm:text-base">
+                    <SelectTrigger id="department-filter" className="text-sm" aria-label="Filter by Department">
                       <SelectValue placeholder="Filter by Department" />
                     </SelectTrigger>
                     <SelectContent>
@@ -188,7 +189,7 @@ export default function CareersPageClient() {
                     value={selectedLocation} 
                     onValueChange={(value) => setSelectedLocation(value === ALL_LOCATIONS_ITEM_VALUE ? "" : value)}
                   >
-                    <SelectTrigger id="location-filter" className="text-sm sm:text-base">
+                    <SelectTrigger id="location-filter" className="text-sm" aria-label="Filter by Location">
                       <SelectValue placeholder="Filter by Location" />
                     </SelectTrigger>
                     <SelectContent>
@@ -203,7 +204,7 @@ export default function CareersPageClient() {
                     value={selectedType} 
                     onValueChange={(value) => setSelectedType(value === ALL_TYPES_ITEM_VALUE ? "" : value)}
                   >
-                    <SelectTrigger id="type-filter" className="text-sm sm:text-base">
+                    <SelectTrigger id="type-filter" className="text-sm" aria-label="Filter by Job Type">
                       <SelectValue placeholder="Filter by Job Type" />
                     </SelectTrigger>
                     <SelectContent>
