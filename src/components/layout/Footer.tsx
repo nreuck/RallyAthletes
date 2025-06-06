@@ -1,3 +1,4 @@
+
 // components/layout/Footer.tsx
 import Link from 'next/link';
 import { Linkedin, Twitter, Facebook, ShieldCheck } from 'lucide-react';
@@ -22,7 +23,7 @@ export function Footer() {
               <li><Link href="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
               <li><Link href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
               <li><Link href="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
           <div className="md:col-span-1">

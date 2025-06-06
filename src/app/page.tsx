@@ -10,19 +10,19 @@ const brands = [
     icon: Users,
     name: 'ScoutMeSports',
     description: 'Connecting talented athletes with scouts and opportunities worldwide. Your journey to professional sports starts here.',
-    link: '#', // Placeholder link
+    link: '/scoutme',
   },
   {
     icon: LayoutDashboard,
     name: 'My Team Dashboard',
     description: 'A comprehensive platform for team management, communication, and performance tracking. Simplify your coaching and team operations.',
-    link: '#', // Placeholder link
+    link: '/myteamdashboard',
   },
   {
     icon: Flame,
     name: 'Fuel My Game',
     description: 'Personalized nutrition plans and resources to help athletes optimize performance and recovery. Eat like a champion.',
-    link: '#', // Placeholder link
+    link: '/fuelmygame',
   },
 ];
 
