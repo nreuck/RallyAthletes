@@ -4,6 +4,7 @@ import type {Config} from 'tailwindcss';
 export default {
   darkMode: ['class'],
   content: [
+    // Removed './src/pages/**/*.{js,ts,jsx,tsx,mdx}' as project uses App Router
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
@@ -17,9 +18,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        // Use the CSS variable defined by next/font
         headline: ['var(--font-inter)', 'sans-serif'],
-        body: ['var(--font-inter)', 'sans-serif'],
+        body: ['var(--font-pt-sans)', 'sans-serif'], // Updated to use PT Sans for body
         code: ['monospace', 'monospace'],
       },
       colors: {
@@ -104,15 +104,37 @@ export default {
       typography: ({ theme }: { theme: Function }) => ({
         DEFAULT: {
           css: {
+            '--tw-prose-body': theme('colors.foreground'),
+            '--tw-prose-headings': theme('colors.primary.DEFAULT'),
+            '--tw-prose-lead': theme('colors.muted.foreground'),
+            '--tw-prose-links': theme('colors.accent.DEFAULT'),
+            '--tw-prose-bold': theme('colors.foreground'),
+            '--tw-prose-counters': theme('colors.muted.foreground'),
+            '--tw-prose-bullets': theme('colors.muted.DEFAULT'),
+            '--tw-prose-hr': theme('colors.border'),
+            '--tw-prose-quotes': theme('colors.primary.DEFAULT'),
+            '--tw-prose-quote-borders': theme('colors.border'),
+            '--tw-prose-captions': theme('colors.muted.foreground'),
+            '--tw-prose-code': theme('colors.foreground'),
+            '--tw-prose-pre-code': theme('colors.foreground'),
+            '--tw-prose-pre-bg': theme('colors.secondary.DEFAULT'),
+            '--tw-prose-th-borders': theme('colors.border'),
+            '--tw-prose-td-borders': theme('colors.border'),
+            '--tw-prose-invert-body': theme('colors.background'), // Example for dark mode if needed
+            '--tw-prose-invert-headings': theme('colors.primary.DEFAULT'),
+            // Add more prose customizations here
             'h1, h2, h3, h4, h5, h6': {
               fontFamily: theme('fontFamily.headline').join(', '),
               color: 'hsl(var(--primary))',
             },
             p: {
+              fontFamily: theme('fontFamily.body').join(', '),
               fontSize: theme('fontSize.lg'),
               lineHeight: theme('lineHeight.relaxed'),
+              color: 'hsl(var(--foreground))',
             },
             a: {
+              fontFamily: theme('fontFamily.body').join(', '),
               color: 'hsl(var(--accent))',
               '&:hover': {
                 color: 'hsl(var(--accent)) / 0.8',
@@ -120,8 +142,21 @@ export default {
             },
             strong: {
               fontWeight: theme('fontWeight.semibold'),
+              fontFamily: theme('fontFamily.body').join(', '),
+              color: 'hsl(var(--foreground))',
             },
-            // You can add more prose customizations here
+             ul: {
+              fontFamily: theme('fontFamily.body').join(', '),
+              color: 'hsl(var(--foreground))',
+            },
+            ol: {
+              fontFamily: theme('fontFamily.body').join(', '),
+              color: 'hsl(var(--foreground))',
+            },
+            li: {
+              fontFamily: theme('fontFamily.body').join(', '),
+              color: 'hsl(var(--foreground))',
+            },
           },
         },
       }),

@@ -8,9 +8,30 @@ import { Separator } from '@/components/ui/separator';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
 import Image from 'next/image'; // Keep for leadership team direct image usage
 
+const aboutOgImage = "https://placehold.co/1200x630.png"; // Placeholder for About Us OG Image
+const aboutOgImageAlt = "Rally Athletes team collaborating";
+
 export const metadata: Metadata = {
   title: 'About Rally Athletes',
   description: 'Learn about the mission, vision, values, and leadership that drive Rally Athletes to innovate in the sports technology industry.',
+  keywords: ['Rally Athletes mission', 'sports innovation', 'company values', 'sports leadership', 'about us', 'sports tech company'],
+  openGraph: {
+    title: 'About Rally Athletes',
+    description: 'Discover the mission, vision, and values behind Rally Athletes.',
+    images: [
+      {
+        url: aboutOgImage,
+        width: 1200,
+        height: 630,
+        alt: aboutOgImageAlt,
+      },
+    ],
+  },
+  twitter: {
+    title: 'About Rally Athletes',
+    description: 'Discover the mission, vision, and values behind Rally Athletes.',
+    images: [aboutOgImage],
+  },
 };
 
 const values = [
@@ -60,7 +81,7 @@ const leadershipTeam: Leader[] = [
     name: 'Alex Johnson',
     title: 'Chief Executive Officer',
     imageUrl: 'https://placehold.co/300x300.png',
-    imageAlt: 'Professional headshot of Alex Johnson, CEO',
+    imageAlt: 'Professional headshot of Alex Johnson, CEO of Rally Athletes',
     imageHint: 'professional headshot',
     bio: 'Alex brings over 20 years of experience in sports management and technology, driving innovation and growth at Rally Athletes.',
   },
@@ -68,7 +89,7 @@ const leadershipTeam: Leader[] = [
     name: 'Maria Garcia',
     title: 'Chief Technology Officer',
     imageUrl: 'https://placehold.co/300x300.png',
-    imageAlt: 'Professional headshot of Maria Garcia, CTO',
+    imageAlt: 'Professional headshot of Maria Garcia, CTO of Rally Athletes',
     imageHint: 'professional headshot',
     bio: 'Maria is a visionary technologist, leading the development of our cutting-edge platforms with a focus on user experience and scalability.',
   },
@@ -76,7 +97,7 @@ const leadershipTeam: Leader[] = [
     name: 'David Lee',
     title: 'Chief Operations Officer',
     imageUrl: 'https://placehold.co/300x300.png',
-    imageAlt: 'Professional headshot of David Lee, COO',
+    imageAlt: 'Professional headshot of David Lee, COO of Rally Athletes',
     imageHint: 'professional headshot',
     bio: 'David ensures operational excellence across all Rally Athletes brands, optimizing processes and fostering a culture of efficiency.',
   },

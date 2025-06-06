@@ -6,6 +6,7 @@ import { Users, LayoutDashboard, Flame, Newspaper, Send, ShieldCheck } from 'luc
 import { BlogPostCard } from '@/components/BlogPostCard';
 import { mockBlogPosts } from '@/lib/blogData';
 import { ResponsiveImage } from '@/components/ResponsiveImage';
+import type { Metadata } from 'next';
 
 const brands = [
   {
@@ -27,6 +28,23 @@ const brands = [
     link: '/fuelmygame',
   },
 ];
+
+export const metadata: Metadata = {
+  title: 'Rally Athletes - Powering Athletes, Uniting Brands',
+  description: 'Rally Athletes unites groundbreaking sports technology: ScoutMe Sports, My Team Dashboard, and Fuel My Game, to elevate every dimension of the athletic journey.',
+  keywords: ['sports technology hub', 'athlete performance', 'scouting platform', 'team management software', 'sports nutrition app', 'Rally Athletes homepage'],
+  openGraph: {
+    title: 'Rally Athletes - Powering Athletes, Uniting Brands',
+    description: 'Rally Athletes unites groundbreaking sports technology to elevate every dimension of the athletic journey.',
+    // Default image from layout.tsx will be used if not specified here
+  },
+  twitter: {
+    title: 'Rally Athletes - Powering Athletes, Uniting Brands',
+    description: 'Rally Athletes unites groundbreaking sports technology to elevate every dimension of the athletic journey.',
+     // Default image from layout.tsx will be used if not specified here
+  },
+};
+
 
 export default function HomePage() {
   const latestPosts = mockBlogPosts

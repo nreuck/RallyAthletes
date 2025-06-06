@@ -6,6 +6,17 @@ import { Mail, Phone, MapPin } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Contact Rally Athletes',
   description: 'Get in touch with Rally Athletes. We are here to answer your questions about our brands and services.',
+  keywords: ['contact Rally Athletes', 'Rally Athletes support', 'sports tech inquiries', 'customer service', 'message us'],
+  openGraph: {
+    title: 'Contact Rally Athletes',
+    description: 'Reach out to Rally Athletes for any questions or inquiries about our sports technology platforms.',
+    // Default image from layout.tsx will be used
+  },
+  twitter: {
+    title: 'Contact Rally Athletes',
+    description: 'Reach out to Rally Athletes for any questions or inquiries about our sports technology platforms.',
+    // Default image from layout.tsx will be used
+  },
 };
 
 export default function ContactPage() {
@@ -49,7 +60,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="flex items-start space-x-3 sm:space-x-4">
-                <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-primary mt-1 shrink-0" />
+                 <MapPin className="h-5 w-5 sm:h-6 sm:w-6 text-primary mt-1 shrink-0 hidden md:block" />
                 <div>
                   <h3 className="font-semibold text-md sm:text-lg flex items-center">
                      <MapPin className="h-4 w-4 sm:h-5 sm:w-5 text-primary mr-2 inline-block md:hidden" />

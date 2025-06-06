@@ -1,13 +1,38 @@
 
 import type { Metadata } from 'next';
 import { Flame } from 'lucide-react';
-import { BrandPageLayout, generateBrandPageMetadata } from '@/components/layout/BrandPageLayout';
+import { BrandPageLayout } from '@/components/layout/BrandPageLayout';
+
+const brandMainImage = "https://placehold.co/800x400.png";
+const brandMainImageAlt = "Healthy food and nutrition plan for athletes by Fuel My Game";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return generateBrandPageMetadata({
-    title: 'Fuel My Game - Personalized Sports Nutrition',
-    description: 'Discover Fuel My Game, a Rally Athletes brand offering personalized nutrition plans to optimize athlete performance.',
-  });
+  const title = 'Fuel My Game - Personalized Sports Nutrition';
+  const description = 'Discover Fuel My Game, a Rally Athletes brand offering personalized nutrition plans and resources to optimize athlete performance and recovery.';
+  return {
+    title: title,
+    description: description,
+    keywords: ['Fuel My Game', 'sports nutrition', 'athlete diet', 'meal planning', 'performance nutrition', 'Rally Athletes brand'],
+    openGraph: {
+      title: title,
+      description: description,
+      images: [
+        {
+          url: brandMainImage,
+          width: 800,
+          height: 400,
+          alt: brandMainImageAlt,
+        },
+      ],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: title,
+      description: description,
+      images: [brandMainImage],
+    },
+  };
 }
 
 export default function FuelMyGamePage() {
@@ -21,14 +46,12 @@ export default function FuelMyGamePage() {
       brandIcon={<Flame />}
       brandName="Fuel My Game"
       brandSlogan="Personalized nutrition plans and resources to help athletes optimize performance and recovery. Eat like a champion."
-      pageTitle="Fuel My Game - Personalized Sports Nutrition"
-      pageDescription="Discover Fuel My Game, a Rally Athletes brand offering personalized nutrition plans to optimize athlete performance."
-      mainImageSrc="https://placehold.co/800x400.png"
-      mainImageAlt="Healthy food for athletes by Fuel My Game"
+      mainImageSrc={brandMainImage}
+      mainImageAlt={brandMainImageAlt}
       mainImageDataAiHint="nutrition healthy food"
       whatIsTitle="What is Fuel My Game?"
       introductionParagraphs={introParagraphs}
-      ctaLink="/contact"
+      ctaLink="/contact" // Example CTA
       ctaText="Explore Nutrition Plans"
     />
   );

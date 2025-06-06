@@ -1,13 +1,38 @@
 
 import type { Metadata } from 'next';
 import { Users } from 'lucide-react';
-import { BrandPageLayout, generateBrandPageMetadata } from '@/components/layout/BrandPageLayout';
+import { BrandPageLayout } from '@/components/layout/BrandPageLayout'; // Removed generateBrandPageMetadata as it's handled directly
+
+const brandMainImage = "https://placehold.co/800x400.png";
+const brandMainImageAlt = "Athlete showcasing skills for ScoutMe Sports";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return generateBrandPageMetadata({
-    title: 'ScoutMe Sports - Connecting Talent & Opportunity',
-    description: 'Learn more about ScoutMe Sports, a Rally Athletes brand dedicated to helping athletes get discovered.',
-  });
+  const title = 'ScoutMe Sports - Connecting Talent & Opportunity';
+  const description = 'Learn more about ScoutMe Sports, a Rally Athletes brand dedicated to helping athletes get discovered and connected with scouts.';
+  return {
+    title: title,
+    description: description,
+    keywords: ['ScoutMe Sports', 'athlete scouting', 'sports recruitment', 'talent discovery platform', 'get scouted', 'Rally Athletes brand'],
+    openGraph: {
+      title: title,
+      description: description,
+      images: [
+        {
+          url: brandMainImage,
+          width: 800,
+          height: 400,
+          alt: brandMainImageAlt,
+        },
+      ],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: title,
+      description: description,
+      images: [brandMainImage],
+    },
+  };
 }
 
 export default function ScoutMeSportsPage() {
@@ -23,14 +48,13 @@ export default function ScoutMeSportsPage() {
       brandIcon={<Users />}
       brandName="ScoutMe Sports"
       brandSlogan="Connecting talented athletes with scouts and opportunities worldwide. Your journey to professional sports starts here."
-      pageTitle="ScoutMe Sports - Connecting Talent & Opportunity"
-      pageDescription="Learn more about ScoutMe Sports, a Rally Athletes brand dedicated to helping athletes get discovered."
-      mainImageSrc="https://placehold.co/800x400.png"
-      mainImageAlt="Athlete showcasing skills for ScoutMe Sports"
+      // pageTitle and pageDescription are now handled by generateMetadata directly
+      mainImageSrc={brandMainImage}
+      mainImageAlt={brandMainImageAlt}
       mainImageDataAiHint="athlete scouting"
       whatIsTitle="What is ScoutMe Sports?"
       introductionParagraphs={introParagraphs}
-      ctaLink="/contact"
+      ctaLink="/contact" // Example CTA, could lead to a sign-up or specific contact form
       ctaText="Learn More & Get Started"
     />
   );

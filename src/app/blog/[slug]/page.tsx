@@ -28,17 +28,31 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   return {
     title: post.title,
     description: post.excerpt,
+    keywords: post.tags, // Use post tags as keywords
     openGraph: {
       title: post.title,
       description: post.excerpt,
+      url: `/blog/${post.slug}`, // Relative to metadataBase
       images: [
         {
-          url: post.imageUrl,
+          url: post.imageUrl, // Ensure this is an absolute URL or resolvable from metadataBase
           width: 1200,
           height: 630,
           alt: post.imageAlt,
         },
       ],
+      type: 'article',
+      article: {
+        publishedTime: new Date(post.date).toISOString(),
+        authors: ['Rally Athletes Team'], // Example author
+        tags: post.tags,
+      },
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [post.imageUrl], // Ensure this is an absolute URL or resolvable
     },
   };
 }

@@ -1,13 +1,38 @@
 
 import type { Metadata } from 'next';
 import { LayoutDashboard } from 'lucide-react';
-import { BrandPageLayout, generateBrandPageMetadata } from '@/components/layout/BrandPageLayout';
+import { BrandPageLayout } from '@/components/layout/BrandPageLayout';
+
+const brandMainImage = "https://placehold.co/800x400.png";
+const brandMainImageAlt = "My Team Dashboard interface showing team schedule and analytics";
 
 export async function generateMetadata(): Promise<Metadata> {
-  return generateBrandPageMetadata({
-    title: 'My Team Dashboard - Efficient Team Management',
-    description: 'Explore My Team Dashboard by Rally Athletes, the ultimate platform for sports team management and communication.',
-  });
+  const title = 'My Team Dashboard - Efficient Team Management';
+  const description = 'Explore My Team Dashboard by Rally Athletes, the ultimate platform for sports team management, communication, and performance tracking.';
+  return {
+    title: title,
+    description: description,
+    keywords: ['My Team Dashboard', 'team management software', 'sports team communication', 'coaching tools', 'athlete performance tracking', 'Rally Athletes brand'],
+    openGraph: {
+      title: title,
+      description: description,
+      images: [
+        {
+          url: brandMainImage,
+          width: 800,
+          height: 400,
+          alt: brandMainImageAlt,
+        },
+      ],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: title,
+      description: description,
+      images: [brandMainImage],
+    },
+  };
 }
 
 export default function MyTeamDashboardPage() {
@@ -22,14 +47,12 @@ export default function MyTeamDashboardPage() {
       brandIcon={<LayoutDashboard />}
       brandName="My Team Dashboard"
       brandSlogan="A comprehensive platform for team management, communication, and performance tracking. Simplify your coaching and team operations."
-      pageTitle="My Team Dashboard - Efficient Team Management"
-      pageDescription="Explore My Team Dashboard by Rally Athletes, the ultimate platform for sports team management and communication."
-      mainImageSrc="https://placehold.co/800x400.png"
-      mainImageAlt="My Team Dashboard interface showing team schedule"
+      mainImageSrc={brandMainImage}
+      mainImageAlt={brandMainImageAlt}
       mainImageDataAiHint="dashboard schedule"
       whatIsTitle="What is My Team Dashboard?"
       introductionParagraphs={introParagraphs}
-      ctaLink="/contact"
+      ctaLink="/contact" // Example CTA
       ctaText="Request a Demo"
     />
   );
