@@ -35,7 +35,7 @@ export default function ContactPage() {
                   <a href="mailto:info@rallyathletes.com" className="text-muted-foreground hover:text-primary transition-colors">
                     info@rallyathletes.com
                   </a>
-                  <p className="text-sm text-muted-foreground/80">General Inquiries</p>
+                  <p className="text-sm text-muted-foreground/80">General Inquiries & Support</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">

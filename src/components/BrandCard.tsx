@@ -3,7 +3,6 @@
 import type { LucideIcon } from 'lucide-react';
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
 interface BrandCardProps {
@@ -25,12 +24,9 @@ export function BrandCard({ icon: Icon, name, description, link }: BrandCardProp
           <CardDescription className="text-base">{description}</CardDescription>
         </CardContent>
         <CardFooter>
-          <Button asChild variant="link" className="p-0 text-primary hover:text-accent group">
-            {/* The parent Link makes this redundant, but kept for styling consistency if desired, or could be simplified */}
-            <span className="flex items-center">
-              Learn More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </span>
-          </Button>
+          <span className="flex items-center text-sm font-medium text-primary group-hover:text-accent group-hover:underline p-0">
+            Learn More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </span>
         </CardFooter>
       </Card>
     </Link>

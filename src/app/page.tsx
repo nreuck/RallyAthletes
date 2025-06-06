@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { BrandCard } from '@/components/BrandCard';
-import { Users, LayoutDashboard, Flame, Newspaper, Send } from 'lucide-react';
+import { Users, LayoutDashboard, Flame, Newspaper, Send, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
 import { BlogPostCard } from '@/components/BlogPostCard';
 import { mockBlogPosts } from '@/lib/blogData';
@@ -38,6 +38,9 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="py-20 md:py-32 bg-gradient-to-br from-background to-secondary">
         <div className="container mx-auto px-4 md:px-6 text-center">
+          <div className="flex justify-center mb-6">
+            <ShieldCheck className="h-20 w-20 text-primary" />
+          </div>
           <h1 className="font-headline text-4xl md:text-6xl font-bold mb-6">
             Powering Athletes, <span className="text-primary">Uniting Brands</span>
           </h1>
@@ -86,7 +89,7 @@ export default function HomePage() {
             <div className="relative h-64 md:h-96 rounded-lg overflow-hidden shadow-xl">
               <Image
                 src="https://placehold.co/600x400.png"
-                alt="Team collaboration"
+                alt="Team collaboration at Rally Athletes office"
                 data-ai-hint="team sports"
                 layout="fill"
                 objectFit="cover"
@@ -120,6 +123,7 @@ export default function HomePage() {
                   imageUrl={post.imageUrl}
                   imageAlt={post.imageAlt}
                   imageHint={post.imageHint}
+                  tags={post.tags}
                 />
               ))}
             </div>

@@ -21,12 +21,12 @@ export default function PrivacyPolicyPage() {
           </Button>
         </div>
 
-        <header className="mb-10 md:mb-12">
+        <header className="mb-10 md:mb-12 pb-6 border-b">
           <div className="flex items-center justify-start mb-4">
              <FileText className="h-10 w-10 text-primary mr-3" />
              <h1 className="font-headline text-3xl md:text-4xl font-bold text-primary">Privacy Policy</h1>
           </div>
-          <p className="text-muted-foreground">Last updated: June 6, 2025</p>
+          <p className="text-muted-foreground text-sm">Last updated: June 6, 2025</p>
         </header>
 
         <article className="prose prose-lg dark:prose-invert max-w-none text-foreground prose-headings:font-headline prose-headings:text-primary prose-p:text-lg prose-p:leading-relaxed prose-a:text-accent hover:prose-a:text-accent/80 prose-strong:font-semibold">
@@ -227,7 +227,7 @@ export default function PrivacyPolicyPage() {
           <h3 className="font-headline text-xl md:text-2xl mt-6 mb-3">8.4. Do Not Sell or Share My Personal Information (for California Residents)</h3>
           <p>Under the California Consumer Privacy Act (CCPA), California residents have the right to:</p>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
-            <li>Request that we disclose the categories and specific pieces of personal information we’vecollected about them.</li>
+            <li>Request that we disclose the categories and specific pieces of personal information we’ve collected about them.</li>
             <li>Request deletion of personal information we hold, subject to certain exceptions.</li>
             <li>Opt out of the sale or sharing of their personal information. We do not sell your personal data for monetary consideration. However, we do share data with service providers to perform essential business functions. To exercise CCPA rights, please contact us at privacy@rallyathletes.com.</li>
           </ul>

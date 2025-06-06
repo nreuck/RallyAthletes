@@ -1,6 +1,8 @@
+
 import type { Metadata } from 'next';
 import { BlogPostCard } from '@/components/BlogPostCard';
 import { mockBlogPosts } from '@/lib/blogData';
+import { FileText } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Blog - Rally Athletes',
@@ -32,11 +34,16 @@ export default function BlogPage() {
                 imageUrl={post.imageUrl}
                 imageAlt={post.imageAlt}
                 imageHint={post.imageHint}
+                tags={post.tags}
               />
             ))}
           </div>
         ) : (
-          <p className="text-center text-muted-foreground text-lg">No blog posts available yet. Check back soon!</p>
+          <div className="text-center py-10">
+            <FileText className="h-16 w-16 text-muted-foreground mx-auto mb-6" />
+            <p className="text-xl text-muted-foreground mb-4">No articles published yet.</p>
+            <p className="text-md text-muted-foreground">Check back soon for the latest insights and news from Rally Athletes!</p>
+          </div>
         )}
       </div>
     </div>

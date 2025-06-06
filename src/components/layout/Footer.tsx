@@ -1,3 +1,4 @@
+
 // components/layout/Footer.tsx
 import Link from 'next/link';
 import { Linkedin, Twitter, Facebook, ShieldCheck } from 'lucide-react';
@@ -8,7 +9,7 @@ export function Footer() {
       <div className="container mx-auto py-8 px-4 md:px-6">
         <div className="grid gap-8 md:grid-cols-3">
           <div>
-            <Link href="/" className="flex items-center gap-2 mb-4">
+            <Link href="/" className="flex items-center gap-2 mb-4" aria-label="Rally Athletes Home">
               <ShieldCheck className="h-7 w-7 text-primary" />
               <span className="font-headline text-xl font-semibold">Rally Athletes</span>
             </Link>
@@ -29,13 +30,13 @@ export function Footer() {
           <div className="md:col-span-1">
              <h3 className="font-headline text-lg font-semibold mb-3">Follow Us</h3>
             <div className="flex space-x-4">
-              <Link href="https://linkedin.com/company/example" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://linkedin.com/company/example" target="_blank" rel="noopener noreferrer" aria-label="Rally Athletes on LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-6 w-6" />
               </Link>
-              <Link href="https://twitter.com/example" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://twitter.com/example" target="_blank" rel="noopener noreferrer" aria-label="Rally Athletes on Twitter" className="text-muted-foreground hover:text-primary transition-colors">
                 <Twitter className="h-6 w-6" />
               </Link>
-              <Link href="https://facebook.com/example" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://facebook.com/example" target="_blank" rel="noopener noreferrer" aria-label="Rally Athletes on Facebook" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook className="h-6 w-6" />
               </Link>
             </div>

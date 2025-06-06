@@ -91,7 +91,7 @@ export default function AboutPage() {
             <div className="relative h-80 md:h-[450px] rounded-lg overflow-hidden shadow-xl">
               <Image
                 src="https://placehold.co/600x450.png"
-                alt="Rally Athletes team working"
+                alt="Rally Athletes team working collaboratively in a modern office"
                 data-ai-hint="diverse team meeting"
                 layout="fill"
                 objectFit="cover"
@@ -121,7 +121,7 @@ export default function AboutPage() {
             <div className="md:order-2 relative h-80 md:h-[450px] rounded-lg overflow-hidden shadow-xl">
               <Image
                 src="https://placehold.co/600x450.png"
-                alt="Vision of future sports technology"
+                alt="Vision of future sports technology with athletes and digital interfaces"
                 data-ai-hint="future sports vision"
                 layout="fill"
                 objectFit="cover"

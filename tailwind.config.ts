@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -18,7 +19,7 @@ export default {
     extend: {
       fontFamily: {
         headline: ['Inter', 'sans-serif'],
-        body: ['Inter', 'sans-serif'], // Changed from PT Sans
+        body: ['Inter', 'sans-serif'],
         code: ['monospace', 'monospace'],
       },
       colors: {
@@ -100,7 +101,31 @@ export default {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+      typography: ({ theme }: { theme: Function }) => ({
+        DEFAULT: {
+          css: {
+            'h1, h2, h3, h4, h5, h6': {
+              fontFamily: theme('fontFamily.headline').join(', '),
+              color: 'hsl(var(--primary))',
+            },
+            p: {
+              fontSize: theme('fontSize.lg'),
+              lineHeight: theme('lineHeight.relaxed'),
+            },
+            a: {
+              color: 'hsl(var(--accent))',
+              '&:hover': {
+                color: 'hsl(var(--accent)) / 0.8',
+              },
+            },
+            strong: {
+              fontWeight: theme('fontWeight.semibold'),
+            },
+            // You can add more prose customizations here
+          },
+        },
+      }),
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
 } satisfies Config;

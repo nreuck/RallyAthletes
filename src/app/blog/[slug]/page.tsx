@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { mockBlogPosts, type BlogPost } from '@/lib/blogData';
-import { CalendarDays, UserCircle, ExternalLink } from 'lucide-react';
+import { CalendarDays, UserCircle } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 interface BlogPostPageProps {
@@ -92,8 +92,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         )}
 
-        <div className="prose prose-lg dark:prose-invert max-w-none text-foreground prose-headings:font-headline prose-headings:text-primary prose-p:text-lg prose-p:leading-relaxed prose-a:text-accent hover:prose-a:text-accent/80">
-          {/* Render Markdown content here if available, or use placeholder */}
+        <div className="prose prose-lg dark:prose-invert max-w-none text-foreground prose-headings:font-headline prose-headings:text-primary prose-p:text-lg prose-p:leading-relaxed prose-a:text-accent hover:prose-a:text-accent/80 prose-strong:font-semibold">
           <p>{post.content.introduction}</p>
           
           {post.content.sections.map((section, index) => (
