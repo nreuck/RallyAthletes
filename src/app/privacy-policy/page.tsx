@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
         <div className="mb-8">
           <Button variant="outline" asChild>
-            <Link href="/">
+            <Link href="/" aria-label="Navigate back to Rally Athletes homepage">
               <ArrowLeft className="mr-2 h-4 w-4" /> <ShieldCheck className="mr-2 h-4 w-4 text-primary" /> Back to Rally Athletes
             </Link>
           </Button>

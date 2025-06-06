@@ -17,26 +17,31 @@ const values = [
     icon: Zap,
     title: 'Innovation',
     description: 'Continuously developing cutting-edge technology to meet the evolving needs of the sports world.',
+    aiHint: 'innovation icon',
   },
   {
     icon: Users,
     title: 'Athlete-Centric',
     description: 'Prioritizing the needs, development, and success of athletes at every level.',
+    aiHint: 'athlete focus icon',
   },
   {
     icon: ShieldCheck,
     title: 'Integrity',
     description: 'Operating with transparency, honesty, and ethical practices in all our endeavors.',
+    aiHint: 'integrity shield icon',
   },
   {
     icon: Handshake,
     title: 'Community',
     description: 'Building strong, supportive connections within the global sports ecosystem.',
+    aiHint: 'community handshake icon',
   },
   {
     icon: Gem,
     title: 'Excellence',
     description: 'Striving for the highest quality and performance in our products, services, and support.',
+    aiHint: 'excellence gem icon',
   },
 ];
 
@@ -165,7 +170,7 @@ export default function AboutPage() {
             {values.map((value) => (
               <Card key={value.title} className="text-center hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
-                  <div className="mx-auto bg-primary/10 rounded-full p-3 w-fit mb-4" data-ai-hint={`${value.title.toLowerCase()} icon`}>
+                  <div className="mx-auto bg-primary/10 rounded-full p-3 w-fit mb-4" data-ai-hint={value.aiHint}>
                     <value.icon className="w-10 h-10 text-primary" />
                   </div>
                   <CardTitle className="font-headline text-2xl">{value.title}</CardTitle>

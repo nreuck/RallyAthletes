@@ -226,18 +226,18 @@ export default function CareersPageClient() {
           ) : allPositions.length > 0 ? (
              <div className="text-center py-10">
                 <SearchIcon className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                <p className="text-xl text-muted-foreground mb-2">No positions match your criteria.</p>
-                <p className="text-md text-muted-foreground">Try adjusting your search or filters.</p>
+                <p className="text-xl text-muted-foreground mb-2">No positions match your search criteria.</p>
+                <p className="text-md text-muted-foreground">Please try adjusting your keyword search or filters, or clear them to see all open roles.</p>
              </div>
           ) : (
             <div className="text-center py-10">
               <Lightbulb className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-              <p className="text-xl text-muted-foreground mb-4">No open positions at the moment.</p>
+              <p className="font-headline text-xl text-foreground mb-4">We're Always Looking for Talent!</p>
               <p className="text-md text-muted-foreground max-w-lg mx-auto mb-6">
-                We're always on the lookout for exceptional talent. If you believe your skills could benefit Rally Athletes, we'd love to hear from you!
+                There are no open positions at the moment, but we're growing fast! If you're passionate about sports technology and believe your skills could make an impact at Rally Athletes, we'd love to hear from you.
               </p>
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                <Link href="mailto:careers@rallyathletes.com?subject=Speculative%20Application">
+                <Link href="mailto:careers@rallyathletes.com?subject=Speculative%20Application%20-%20Rally%20Athletes">
                   Send Us Your Resume <Send className="ml-2 h-5 w-5" />
                 </Link>
               </Button>

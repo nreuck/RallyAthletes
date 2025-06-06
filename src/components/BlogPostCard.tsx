@@ -55,7 +55,7 @@ export function BlogPostCard({ slug, title, excerpt, date, imageUrl, imageAlt, i
       </CardContent>
       <CardFooter>
         <Button asChild variant="link" className="p-0 text-primary hover:text-accent group">
-          <Link href={`/blog/${slug}`}>
+          <Link href={`/blog/${slug}`} aria-label={`Read more about ${title}`}>
             Read More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </Button>
