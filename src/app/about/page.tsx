@@ -28,7 +28,7 @@ const values = [
     description: 'Operating with transparency, honesty, and ethical practices in all our endeavors.',
   },
   {
-    icon: Users, 
+    icon: Users,
     title: 'Community',
     description: 'Building strong, supportive connections within the global sports ecosystem.',
   },
@@ -101,7 +101,7 @@ export default function AboutPage() {
               <h2 className="font-headline text-3xl font-semibold mb-4 flex items-center">
                 <Target className="w-8 h-8 mr-3 text-primary" /> Our Mission
               </h2>
-              <div className="mb-6 space-y-4">
+              <div className="space-y-4">
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   At Rally Athletes, our mission is to create and unite purpose-built digital platforms that empower athletes, teams, and their support networks to achieve peak performance, seamless collaboration, and meaningful connections.
                 </p>
@@ -112,6 +112,22 @@ export default function AboutPage() {
                   By blending innovative technology, personalized experiences, and a deep understanding of the sports ecosystem, we enable every athlete, coach, parent, and organization to focus on what truly matters: growth, teamwork, and success both on and off the field.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-12 md:mb-16">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <div className="md:order-2 relative h-80 md:h-[450px] rounded-lg overflow-hidden shadow-xl">
+              <Image
+                src="https://placehold.co/600x450.png"
+                alt="Vision of future sports technology"
+                data-ai-hint="future sports vision"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
+            <div className="md:order-1">
               <h2 className="font-headline text-3xl font-semibold mb-4 flex items-center">
                 <Eye className="w-8 h-8 mr-3 text-primary" /> Our Vision
               </h2>
