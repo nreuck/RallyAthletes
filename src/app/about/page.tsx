@@ -106,7 +106,7 @@ export default function AboutPage() {
                   At Rally Athletes, our mission is to create and unite purpose-built digital platforms that empower athletes, teams, and their support networks to achieve peak performance, seamless collaboration, and meaningful connections.
                 </p>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  Through our family of brands—ScoutMe, Fuel My Game, and My Team Dashboard—we deliver intuitive tools and data-driven insights that help athletes showcase their talents, fuel their bodies with optimal nutrition, and streamline team management.
+                  Through our family of brands—ScoutMe Sports, Fuel My Game, and My Team Dashboard—we deliver intuitive tools and data-driven insights that help athletes showcase their talents, fuel their bodies with optimal nutrition, and streamline team management.
                 </p>
                 <p className="text-muted-foreground text-lg leading-relaxed">
                   By blending innovative technology, personalized experiences, and a deep understanding of the sports ecosystem, we enable every athlete, coach, parent, and organization to focus on what truly matters: growth, teamwork, and success both on and off the field.
@@ -137,7 +137,7 @@ export default function AboutPage() {
                 </p>
                 <ul className="list-disc list-inside space-y-2 pl-4">
                   <li>
-                    <strong>Talent Discovery through ScoutMe</strong> unlocks opportunities for athletes to be seen by recruiters, coaches, and programs worldwide, leveling the playing field for those who strive to go further.
+                    <strong>Talent Discovery through ScoutMe Sports</strong> unlocks opportunities for athletes to be seen by recruiters, coaches, and programs worldwide, leveling the playing field for those who strive to go further.
                   </li>
                   <li>
                     <strong>Personalized Nutrition via Fuel My Game</strong> evolves into an indispensable resource that adapts to each athlete’s unique needs, anticipating trends in sports science and leveraging AI to optimize performance and recovery.
