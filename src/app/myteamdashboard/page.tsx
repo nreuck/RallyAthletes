@@ -40,7 +40,7 @@ export default function MyTeamDashboardPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground text-lg">
-                My Team Dashboard, a core offering from Rally Athletes, is designed to streamline every aspect of sports team management. We provide coaches, players, and administrators with intuitive tools for scheduling, communication, roster management, and performance analysis.
+                My Team Dashboard, a core offering from Rally Athletes, is meticulously designed to revolutionize how sports teams operate by streamlining every facet of management. We empower coaches, players, parents, and administrators with a comprehensive suite of intuitive tools covering dynamic scheduling, instant communication channels, robust roster management, and insightful performance analytics.
               </p>
               <div className="relative h-64 md:h-96 w-full my-6 rounded-lg overflow-hidden shadow-md">
                 <Image
@@ -52,7 +52,10 @@ export default function MyTeamDashboardPage() {
                 />
               </div>
               <p className="text-muted-foreground text-lg">
-                Our platform fosters seamless collaboration, ensures everyone stays informed, and helps unlock peak team performance. By centralizing team operations, My Team Dashboard allows coaches and managers to focus on strategy and player development, rather than administrative burdens.
+                Imagine a world where practice changes are instantly communicated, game strategies are easily shared, and player progress is transparently tracked. Our platform cultivates this environment, fostering seamless collaboration and ensuring every team member is aligned and informed. My Team Dashboard acts as the central nervous system for your team, digitizing workflows and eliminating administrative bottlenecks.
+              </p>
+              <p className="text-muted-foreground text-lg">
+                By centralizing operations—from managing player availability and tracking attendance to sharing crucial documents and analyzing game footage—My Team Dashboard liberates coaches and managers from time-consuming administrative tasks. This allows them to dedicate their valuable time and energy to what truly matters: strategic planning, skill development, and nurturing athlete growth. Elevate your team's efficiency and focus with My Team Dashboard.
               </p>
               <div className="pt-4">
                 <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
