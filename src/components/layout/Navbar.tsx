@@ -55,11 +55,11 @@ export function Navbar() {
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2" onClick={closeSheet} aria-label="Rally Athletes Home">
           <Image 
-            src="/rally-athletes-logo.png" 
-            alt="Rally Athletes Logo" 
-            width={50} // Intrinsic width for 1:1 aspect ratio (icon-like)
-            height={50} // Intrinsic height for 1:1 aspect ratio
-            className="h-6 sm:h-7 w-auto" // Display height, width auto to maintain aspect ratio
+            src="https://placehold.co/50x50.png" 
+            alt="Rally Athletes Logo Placeholder" 
+            width={50} 
+            height={50} 
+            className="h-6 sm:h-7 w-auto" 
             priority
           />
           <span className="font-headline text-lg sm:text-xl font-semibold">Rally Athletes</span>
@@ -93,8 +93,8 @@ export function Navbar() {
               <div className="p-4">
                 <Link href="/" className="flex items-center gap-2 mb-8" onClick={closeSheet} aria-label="Rally Athletes Home">
                   <Image 
-                    src="/rally-athletes-logo.png" 
-                    alt="Rally Athletes Logo" 
+                    src="https://placehold.co/50x50.png" 
+                    alt="Rally Athletes Logo Placeholder" 
                     width={50} 
                     height={50} 
                     className="h-7 w-auto" 

@@ -12,11 +12,11 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4" aria-label="Rally Athletes Home">
               <Image 
-                src="/rally-athletes-logo.png" 
-                alt="Rally Athletes Logo" 
-                width={50} // Intrinsic width for 1:1 aspect ratio
-                height={50} // Intrinsic height for 1:1 aspect ratio
-                className="h-6 sm:h-7 w-auto" // Display height, width auto
+                src="https://placehold.co/50x50.png" 
+                alt="Rally Athletes Logo Placeholder" 
+                width={50} 
+                height={50} 
+                className="h-6 sm:h-7 w-auto" 
               />
               <span className="font-headline text-lg sm:text-xl font-semibold">Rally Athletes</span>
             </Link>
