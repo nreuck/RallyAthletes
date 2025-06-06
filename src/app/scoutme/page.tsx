@@ -2,7 +2,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Users, ArrowLeft } from 'lucide-react';
+import { Users, ArrowLeft, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 
@@ -18,7 +18,7 @@ export default function ScoutMeSportsPage() {
         <div className="mb-8">
           <Button variant="outline" asChild>
             <Link href="/">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Rally Athletes
+              <ArrowLeft className="mr-2 h-4 w-4" /> <ShieldCheck className="mr-2 h-4 w-4 text-primary" /> Back to Rally Athletes
             </Link>
           </Button>
         </div>
@@ -72,7 +72,7 @@ export default function ScoutMeSportsPage() {
         </section>
 
         <section className="text-center">
-            <h2 className="font-headline text-2xl md:text-3xl font-bold mb-4">Part of the Rally Athletes Family</h2>
+            <h2 className="font-headline text-2xl md:text-3xl font-bold mb-4">A Rally Athletes Brand</h2>
             <p className="text-muted-foreground max-w-xl mx-auto mb-6">
                 ScoutMe Sports is proud to be a key component of Rally Athletes, working alongside other innovative brands to empower the entire sports ecosystem.
             </p>

@@ -2,7 +2,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Flame, ArrowLeft } from 'lucide-react';
+import { Flame, ArrowLeft, ShieldCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 
@@ -18,7 +18,7 @@ export default function FuelMyGamePage() {
         <div className="mb-8">
           <Button variant="outline" asChild>
             <Link href="/">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Rally Athletes
+              <ArrowLeft className="mr-2 h-4 w-4" /> <ShieldCheck className="mr-2 h-4 w-4 text-primary" /> Back to Rally Athletes
             </Link>
           </Button>
         </div>
@@ -66,7 +66,7 @@ export default function FuelMyGamePage() {
         </section>
         
         <section className="text-center">
-            <h2 className="font-headline text-2xl md:text-3xl font-bold mb-4">Powered by Rally Athletes</h2>
+            <h2 className="font-headline text-2xl md:text-3xl font-bold mb-4">A Rally Athletes Brand</h2>
             <p className="text-muted-foreground max-w-xl mx-auto mb-6">
                 Fuel My Game leverages the innovative spirit of Rally Athletes to deliver best-in-class nutritional support for athletes at all levels.
             </p>

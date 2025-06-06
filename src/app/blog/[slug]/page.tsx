@@ -1,8 +1,9 @@
+
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { mockBlogPosts, type BlogPost } from '@/lib/blogData';
-import { CalendarDays, UserCircle } from 'lucide-react';
+import { CalendarDays, UserCircle, ExternalLink } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 interface BlogPostPageProps {
@@ -64,7 +65,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <CalendarDays className="h-4 w-4 mr-1.5" />
               {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center font-medium">
               <UserCircle className="h-4 w-4 mr-1.5" />
               By Rally Athletes Team
             </div>

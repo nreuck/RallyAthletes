@@ -1,7 +1,7 @@
 
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowLeft, FileText } from 'lucide-react';
+import { ArrowLeft, FileText, ShieldCheck, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const metadata: Metadata = {
@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <div className="bg-background py-12 md:py-20">
-      <div className="container mx-auto px-4 md:px-6 max-w-4xl"> {/* Changed max-w-3xl to max-w-4xl */}
+      <div className="container mx-auto px-4 md:px-6 max-w-4xl">
         <div className="mb-8">
           <Button variant="outline" asChild>
             <Link href="/">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Rally Athletes
+              <ArrowLeft className="mr-2 h-4 w-4" /> <ShieldCheck className="mr-2 h-4 w-4 text-primary" /> Back to Rally Athletes
             </Link>
           </Button>
         </div>
@@ -202,7 +202,7 @@ export default function PrivacyPolicyPage() {
           <p><strong>Third-Party Cookies</strong></p>
           <p>Third-party vendors (e.g., Google Analytics, Google AdSense, Facebook Pixel) may set cookies to provide services on our behalf. We do not have direct control over those cookies.</p>
           <p><strong>Managing Cookies</strong></p>
-          <p>You can set your browser to refuse cookies or alert you when cookies are being sent. However, disabling cookies may affect essential functionality of the Service (e.g., signing in, saving preferences). To learn more about opting out of interest-based advertising, visit <Link href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">aboutads.info/choices/</Link> and <Link href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener noreferrer">networkadvertising.org/choices/</Link>.</p>
+          <p>You can set your browser to refuse cookies or alert you when cookies are being sent. However, disabling cookies may affect essential functionality of the Service (e.g., signing in, saving preferences). To learn more about opting out of interest-based advertising, visit <Link href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">aboutads.info/choices/ <ExternalLink className="ml-1 h-4 w-4" /></Link> and <Link href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">networkadvertising.org/choices/ <ExternalLink className="ml-1 h-4 w-4" /></Link>.</p>
 
           <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">8. Your Privacy Rights & Choices</h2>
           <p>Depending on where you live, you may have certain rights regarding your personal information.</p>
@@ -221,7 +221,7 @@ export default function PrivacyPolicyPage() {
           <h3 className="font-headline text-xl md:text-2xl mt-6 mb-3">8.3. Cookie & Analytics Opt-Out</h3>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>Browser Settings: Adjust your browser settings to block or delete cookies. Note that some features may not work properly without cookies.</li>
-            <li>Google Analytics Opt-Out: You can install the Google Analytics Opt-Out Browser Add-On, available at <Link href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">tools.google.com/dlpage/gaoptout</Link>.</li>
+            <li>Google Analytics Opt-Out: You can install the Google Analytics Opt-Out Browser Add-On, available at <Link href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">tools.google.com/dlpage/gaoptout <ExternalLink className="ml-1 h-4 w-4" /></Link>.</li>
           </ul>
 
           <h3 className="font-headline text-xl md:text-2xl mt-6 mb-3">8.4. Do Not Sell or Share My Personal Information (for California Residents)</h3>

@@ -1,3 +1,4 @@
+
 import type { Metadata } from 'next';
 import { ContactForm } from '@/components/ContactForm';
 import { Mail, Phone, MapPin } from 'lucide-react';
@@ -31,7 +32,7 @@ export default function ContactPage() {
                 <Mail className="h-6 w-6 text-primary mt-1 shrink-0" />
                 <div>
                   <h3 className="font-semibold text-lg">Email</h3>
-                  <a href="mailto:info@rallyathletes.com" className="text-muted-foreground hover:text-primary">
+                  <a href="mailto:info@rallyathletes.com" className="text-muted-foreground hover:text-primary transition-colors">
                     info@rallyathletes.com
                   </a>
                   <p className="text-sm text-muted-foreground/80">General Inquiries</p>
@@ -41,7 +42,7 @@ export default function ContactPage() {
                 <Phone className="h-6 w-6 text-primary mt-1 shrink-0" />
                 <div>
                   <h3 className="font-semibold text-lg">Phone</h3>
-                  <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary">
+                  <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
                     +1 (234) 567-890
                   </a>
                   <p className="text-sm text-muted-foreground/80">Mon - Fri, 9am - 5pm EST</p>

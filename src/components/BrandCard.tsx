@@ -1,3 +1,4 @@
+
 // components/BrandCard.tsx
 import type { LucideIcon } from 'lucide-react';
 import Link from 'next/link';
@@ -14,21 +15,24 @@ interface BrandCardProps {
 
 export function BrandCard({ icon: Icon, name, description, link }: BrandCardProps) {
   return (
-    <Card className="flex flex-col h-full transform transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
-      <CardHeader className="flex flex-row items-center gap-4 pb-2">
-        <Icon className="h-10 w-10 text-primary" />
-        <CardTitle className="font-headline text-2xl">{name}</CardTitle>
-      </CardHeader>
-      <CardContent className="flex-grow">
-        <CardDescription className="text-base">{description}</CardDescription>
-      </CardContent>
-      <CardFooter>
-        <Button asChild variant="link" className="p-0 text-primary hover:text-accent group">
-          <Link href={link}>
-            Learn More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </Button>
-      </CardFooter>
-    </Card>
+    <Link href={link} className="block h-full group">
+      <Card className="flex flex-col h-full transform transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+        <CardHeader className="flex flex-row items-center gap-4 pb-2">
+          <Icon className="h-10 w-10 text-primary" />
+          <CardTitle className="font-headline text-2xl">{name}</CardTitle>
+        </CardHeader>
+        <CardContent className="flex-grow">
+          <CardDescription className="text-base">{description}</CardDescription>
+        </CardContent>
+        <CardFooter>
+          <Button asChild variant="link" className="p-0 text-primary hover:text-accent group">
+            {/* The parent Link makes this redundant, but kept for styling consistency if desired, or could be simplified */}
+            <span className="flex items-center">
+              Learn More <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </span>
+          </Button>
+        </CardFooter>
+      </Card>
+    </Link>
   );
 }

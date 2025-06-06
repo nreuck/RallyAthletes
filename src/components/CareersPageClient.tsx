@@ -161,7 +161,7 @@ export default function CareersPageClient() {
                     onValueChange={(value) => setSelectedDepartment(value === ALL_DEPARTMENTS_ITEM_VALUE ? "" : value)}
                   >
                     <SelectTrigger id="department-filter">
-                      <SelectValue placeholder="All Departments" />
+                      <SelectValue placeholder="Filter by Department" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value={ALL_DEPARTMENTS_ITEM_VALUE}>All Departments</SelectItem>
@@ -176,7 +176,7 @@ export default function CareersPageClient() {
                     onValueChange={(value) => setSelectedLocation(value === ALL_LOCATIONS_ITEM_VALUE ? "" : value)}
                   >
                     <SelectTrigger id="location-filter">
-                      <SelectValue placeholder="All Locations" />
+                      <SelectValue placeholder="Filter by Location" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value={ALL_LOCATIONS_ITEM_VALUE}>All Locations</SelectItem>
@@ -191,7 +191,7 @@ export default function CareersPageClient() {
                     onValueChange={(value) => setSelectedType(value === ALL_TYPES_ITEM_VALUE ? "" : value)}
                   >
                     <SelectTrigger id="type-filter">
-                      <SelectValue placeholder="All Types" />
+                      <SelectValue placeholder="Filter by Job Type" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value={ALL_TYPES_ITEM_VALUE}>All Types</SelectItem>

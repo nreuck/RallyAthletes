@@ -201,7 +201,9 @@ export default function AboutPage() {
 
         <section className="py-12 md:py-16 bg-secondary rounded-lg shadow-lg">
           <div className="container mx-auto px-4 md:px-6 text-center">
-            <Briefcase className="h-16 w-16 text-primary mx-auto mb-6" />
+            <Link href="/careers" aria-label="View Open Positions">
+                <Briefcase className="h-16 w-16 text-primary mx-auto mb-6 hover:text-accent transition-colors" />
+            </Link>
             <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">Join Our Team</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg">
               We're always looking for passionate and talented individuals to help us shape the future of sports technology. If you're driven by innovation and want to make an impact, explore our open positions.

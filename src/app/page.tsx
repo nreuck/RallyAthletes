@@ -100,7 +100,9 @@ export default function HomePage() {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
-            <Newspaper className="h-16 w-16 text-primary mx-auto mb-6" />
+            <Link href="/blog" aria-label="Visit Our Blog">
+                <Newspaper className="h-16 w-16 text-primary mx-auto mb-6 hover:text-accent transition-colors" />
+            </Link>
             <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">Latest Insights & News</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Stay informed with the latest updates, success stories, and industry trends from the world of Rally Athletes.
@@ -135,7 +137,9 @@ export default function HomePage() {
       {/* Contact CTA Section */}
       <section className="py-16 md:py-24 bg-secondary">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <Send className="h-16 w-16 text-accent mx-auto mb-6" />
+          <Link href="/contact" aria-label="Contact Us">
+            <Send className="h-16 w-16 text-accent mx-auto mb-6 hover:text-primary transition-colors" />
+          </Link>
           <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">Get in Touch</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
             Have questions or want to learn more about Rally Athletes? We’d love to hear from you.
