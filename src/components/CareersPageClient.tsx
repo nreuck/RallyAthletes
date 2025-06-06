@@ -152,7 +152,7 @@ export default function CareersPageClient() {
                       placeholder="e.g., Engineer, Product"
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="pl-10 pr-10" // Added pr-10 for clear icon
+                      className="pl-10 pr-10"
                     />
                     {searchTerm && (
                       <Button
@@ -282,3 +282,4 @@ export default function CareersPageClient() {
     </div>
   );
 }
+

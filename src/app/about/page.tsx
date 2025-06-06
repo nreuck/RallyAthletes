@@ -59,7 +59,7 @@ const leadershipTeam: Leader[] = [
     name: 'Alex Johnson',
     title: 'Chief Executive Officer',
     imageUrl: 'https://placehold.co/300x300.png',
-    imageAlt: 'Alex Johnson, CEO',
+    imageAlt: 'Professional headshot of Alex Johnson, CEO',
     imageHint: 'professional headshot',
     bio: 'Alex brings over 20 years of experience in sports management and technology, driving innovation and growth at Rally Athletes.',
   },
@@ -67,7 +67,7 @@ const leadershipTeam: Leader[] = [
     name: 'Maria Garcia',
     title: 'Chief Technology Officer',
     imageUrl: 'https://placehold.co/300x300.png',
-    imageAlt: 'Maria Garcia, CTO',
+    imageAlt: 'Professional headshot of Maria Garcia, CTO',
     imageHint: 'professional headshot',
     bio: 'Maria is a visionary technologist, leading the development of our cutting-edge platforms with a focus on user experience and scalability.',
   },
@@ -75,7 +75,7 @@ const leadershipTeam: Leader[] = [
     name: 'David Lee',
     title: 'Chief Operations Officer',
     imageUrl: 'https://placehold.co/300x300.png',
-    imageAlt: 'David Lee, COO',
+    imageAlt: 'Professional headshot of David Lee, COO',
     imageHint: 'professional headshot',
     bio: 'David ensures operational excellence across all Rally Athletes brands, optimizing processes and fostering a culture of efficiency.',
   },
@@ -234,3 +234,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

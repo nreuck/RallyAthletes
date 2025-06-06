@@ -65,3 +65,4 @@ export function BlogPostCard({ slug, title, excerpt, date, imageUrl, imageAlt, i
     </Card>
   );
 }
+

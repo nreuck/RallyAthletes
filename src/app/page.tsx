@@ -124,7 +124,7 @@ export default function HomePage() {
                   imageAlt={post.imageAlt}
                   imageHint={post.imageHint}
                   tags={post.tags}
-                  isPriority={index < 3} // Prioritize images for the latest posts shown on homepage
+                  isPriority={index < 3} 
                 />
               ))}
             </div>
@@ -157,3 +157,4 @@ export default function HomePage() {
     </div>
   );
 }
+
