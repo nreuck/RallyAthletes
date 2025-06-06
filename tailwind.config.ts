@@ -18,8 +18,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        headline: ['Inter', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        // Use the CSS variable defined by next/font
+        headline: ['var(--font-inter)', 'sans-serif'],
+        body: ['var(--font-inter)', 'sans-serif'],
         code: ['monospace', 'monospace'],
       },
       colors: {

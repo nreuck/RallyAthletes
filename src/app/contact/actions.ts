@@ -27,7 +27,7 @@ export async function submitContactForm(
   const { name, email, subject, message } = validatedFields.data;
 
   // Simulate sending an email or saving to a database
-  console.log('Contact form submitted:', { name, email, subject, message });
+  // console.log('Contact form submitted:', { name, email, subject, message }); // Removed for production
   await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate network delay
 
   // Example of a random error

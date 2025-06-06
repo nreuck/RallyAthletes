@@ -1,10 +1,16 @@
 
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import './globals.css';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Toaster } from '@/components/ui/toaster';
+import { Inter } from 'next/font/google';
+
+const inter = Inter({ 
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter', // CSS variable name
+});
 
 export const metadata: Metadata = {
   title: {
@@ -13,6 +19,12 @@ export const metadata: Metadata = {
   },
   description: 'Central hub for Rally Athletes brands: ScoutMe Sports, My Team Dashboard, and Fuel My Game. Discover our mission to empower athletes and sports organizations.',
   keywords: ['Rally Athletes', 'ScoutMe Sports', 'My Team Dashboard', 'Fuel My Game', 'sports technology', 'athlete empowerment'],
+  // Add more metadata here like openGraph, icons, etc. for production
+  // e.g., manifest: '/site.webmanifest',
+  // icons: {
+  //   icon: '/favicon.ico',
+  //   apple: '/apple-touch-icon.png',
+  // },
 };
 
 export default function RootLayout({
@@ -21,11 +33,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        {/* Google Fonts preconnects are no longer needed when using next/font */}
       </head>
       <body className="font-body antialiased flex flex-col min-h-screen">
         <Navbar />
@@ -38,4 +48,3 @@ export default function RootLayout({
     </html>
   );
 }
-
