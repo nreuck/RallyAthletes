@@ -20,7 +20,7 @@ const fontPTSans = FontPTSans({
   variable: '--font-pt-sans',
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rallyathletes.com';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.rallyathletes.com';
 const defaultOgImage = `${siteUrl}/rally-athletes-og-image.png`;
 
 export const metadata: Metadata = {
