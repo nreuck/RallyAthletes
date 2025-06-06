@@ -1,6 +1,8 @@
+
 // components/layout/Footer.tsx
 import Link from 'next/link';
-import { Linkedin, Twitter, Facebook, ShieldCheck } from 'lucide-react';
+import Image from 'next/image';
+import { Linkedin, Twitter, Facebook } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -9,7 +11,13 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4" aria-label="Rally Athletes Home">
-              <ShieldCheck className="h-6 w-6 sm:h-7 sm:w-7 text-primary" />
+              <Image 
+                src="/rally-athletes-logo.png" 
+                alt="Rally Athletes Logo" 
+                width={28} 
+                height={28}
+                className="h-6 w-6 sm:h-7 sm:w-7"
+              />
               <span className="font-headline text-lg sm:text-xl font-semibold">Rally Athletes</span>
             </Link>
             <p className="text-xs sm:text-sm text-muted-foreground">

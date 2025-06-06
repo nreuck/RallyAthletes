@@ -20,6 +20,7 @@ const fontPTSans = FontPTSans({
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://rallyathletes.com';
+const defaultOgImage = `${siteUrl}/rally-athletes-og-image.png`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -39,10 +40,10 @@ export const metadata: Metadata = {
     siteName: 'Rally Athletes',
     images: [
       {
-        url: 'https://placehold.co/1200x630.png', // Default OG Image - simplified
+        url: defaultOgImage,
         width: 1200,
         height: 630,
-        alt: 'Rally Athletes Logo Banner', // Updated alt text
+        alt: 'Rally Athletes Logo Banner',
       },
     ],
     locale: 'en_US',
@@ -55,14 +56,14 @@ export const metadata: Metadata = {
       template: '%s | Rally Athletes',
     },
     description: 'Central hub for Rally Athletes brands: ScoutMe Sports, My Team Dashboard, and Fuel My Game.',
-    images: ['https://placehold.co/1200x630.png'], // Default Twitter Image - simplified
+    images: [defaultOgImage],
     // site: '@RallyAthletes', // Optional: Add your Twitter handle
     // creator: '@RallyAthletes', // Optional: Add your Twitter handle
   },
   // manifest: '/site.webmanifest', // If you have one
   // icons: { 
-  //   icon: '/favicon.ico',
-  //   apple: '/apple-touch-icon.png',
+  //   icon: '/favicon.ico', // You would place favicon.ico in public folder
+  //   apple: '/apple-touch-icon.png', // You would place apple-touch-icon.png in public folder
   // },
 };
 

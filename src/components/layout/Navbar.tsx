@@ -3,10 +3,11 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, ShieldCheck } from 'lucide-react';
+import { Menu } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
@@ -35,7 +36,8 @@ export function Navbar() {
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 sm:px-6">
           <Link href="/" className="flex items-center gap-2" aria-label="Rally Athletes Home">
-            <ShieldCheck className="h-6 w-6 sm:h-7 sm:w-7 text-primary" />
+            {/* Placeholder for logo before mount */}
+            <div className="h-6 w-6 sm:h-7 sm:w-7 bg-primary/20 rounded"></div>
             <span className="font-headline text-lg sm:text-xl font-semibold">Rally Athletes</span>
           </Link>
           <div className="md:hidden">
@@ -52,7 +54,14 @@ export function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2" onClick={closeSheet} aria-label="Rally Athletes Home">
-          <ShieldCheck className="h-6 w-6 sm:h-7 sm:w-7 text-primary" />
+          <Image 
+            src="/rally-athletes-logo.png" 
+            alt="Rally Athletes Logo" 
+            width={28} 
+            height={28} 
+            className="h-6 w-6 sm:h-7 sm:w-7"
+            priority
+          />
           <span className="font-headline text-lg sm:text-xl font-semibold">Rally Athletes</span>
         </Link>
 
@@ -83,7 +92,13 @@ export function Navbar() {
             <SheetContent side="right" className="w-[260px] sm:w-[300px]">
               <div className="p-4">
                 <Link href="/" className="flex items-center gap-2 mb-8" onClick={closeSheet} aria-label="Rally Athletes Home">
-                  <ShieldCheck className="h-7 w-7 text-primary" />
+                  <Image 
+                    src="/rally-athletes-logo.png" 
+                    alt="Rally Athletes Logo" 
+                    width={28} 
+                    height={28} 
+                    className="h-7 w-7"
+                  />
                   <span className="font-headline text-xl font-semibold">Rally Athletes</span>
                 </Link>
                 <nav className="flex flex-col gap-3" aria-label="Mobile Navigation">
