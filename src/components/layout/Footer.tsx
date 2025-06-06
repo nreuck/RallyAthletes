@@ -29,13 +29,13 @@ export function Footer() {
           <div className="md:col-span-1">
              <h3 className="font-headline text-lg font-semibold mb-3">Follow Us</h3>
             <div className="flex space-x-4">
-              <Link href="#" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://linkedin.com/company/example" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin className="h-6 w-6" />
               </Link>
-              <Link href="#" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://twitter.com/example" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary transition-colors">
                 <Twitter className="h-6 w-6" />
               </Link>
-              <Link href="#" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link href="https://facebook.com/example" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-primary transition-colors">
                 <Facebook className="h-6 w-6" />
               </Link>
             </div>
