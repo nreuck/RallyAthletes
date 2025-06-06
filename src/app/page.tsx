@@ -71,7 +71,7 @@ export default function HomePage() {
             <div>
               <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">Who We Are</h2>
               <p className="text-muted-foreground mb-6 text-lg">
-                At Rally Athletes, we are passionate about leveraging technology to revolutionize the sports industry. Our mission is to empower individuals and teams to achieve their full potential through our suite of specialized platforms.
+                At Rally Athletes, we're fueled by innovation and a commitment to athlete success. We build specialized platforms that empower individuals and teams, helping them reach their full potential and transform their game.
               </p>
               <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
                 <Link href="/about">Discover Our Mission</Link>
