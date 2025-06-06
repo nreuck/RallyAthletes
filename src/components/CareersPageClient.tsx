@@ -64,7 +64,10 @@ function JobPositionCard({ position }: { position: JobPosition }) {
 }
 
 export default function CareersPageClient() {
-  const allPositions = openPositions;
+  const allPositions = useMemo(() => 
+    [...openPositions].sort((a, b) => new Date(b.postedDate).getTime() - new Date(a.postedDate).getTime()), 
+    []
+  );
 
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('');
@@ -201,7 +204,10 @@ export default function CareersPageClient() {
                 </div>
               </div>
               {areFiltersActive && (
-                <div className="mt-4 flex justify-end">
+                <div className="mt-4 flex justify-between items-center">
+                    <p className="text-sm text-muted-foreground">
+                        Showing {filteredPositions.length} of {allPositions.length} job{allPositions.length === 1 ? "" : "s"}
+                    </p>
                     <Button variant="ghost" onClick={handleClearFilters} className="text-sm text-primary hover:text-accent">
                         <ClearIcon className="mr-2 h-4 w-4" />
                         Clear Filters

@@ -2,7 +2,7 @@
 // components/BrandCard.tsx
 import type { LucideIcon } from 'lucide-react';
 import Link from 'next/link';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 
 interface BrandCardProps {
@@ -21,7 +21,7 @@ export function BrandCard({ icon: Icon, name, description, link }: BrandCardProp
           <CardTitle className="font-headline text-2xl">{name}</CardTitle>
         </CardHeader>
         <CardContent className="flex-grow">
-          <CardDescription className="text-base">{description}</CardDescription>
+          <p className="text-base text-foreground/90">{description}</p>
         </CardContent>
         <CardFooter>
           <span className="flex items-center text-sm font-medium text-primary group-hover:text-accent group-hover:underline p-0">

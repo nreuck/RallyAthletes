@@ -49,6 +49,7 @@ export default function MyTeamDashboardPage() {
                   data-ai-hint="dashboard schedule"
                   layout="fill"
                   objectFit="cover"
+                  priority
                 />
               </div>
               <p className="text-muted-foreground text-lg">

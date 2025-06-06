@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Target, Eye, Gem, Users, Zap, ShieldCheck, Briefcase, ArrowRight, Handshake } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
 
 export const metadata: Metadata = {
   title: 'About Rally Athletes',
@@ -116,6 +117,8 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <Separator className="my-12 md:my-16" />
+
         <section className="mb-12 md:mb-16">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="md:order-2 relative h-80 md:h-[450px] rounded-lg overflow-hidden shadow-xl">
@@ -154,13 +157,15 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <Separator className="my-12 md:my-16" />
+
         <section className="mb-12 md:mb-16">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-10">Our Core Values</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value) => (
               <Card key={value.title} className="text-center hover:shadow-lg transition-shadow duration-300">
                 <CardHeader>
-                  <div className="mx-auto bg-primary/10 rounded-full p-3 w-fit mb-4">
+                  <div className="mx-auto bg-primary/10 rounded-full p-3 w-fit mb-4" data-ai-hint={`${value.title.toLowerCase()} icon`}>
                     <value.icon className="w-10 h-10 text-primary" />
                   </div>
                   <CardTitle className="font-headline text-2xl">{value.title}</CardTitle>
@@ -172,6 +177,8 @@ export default function AboutPage() {
             ))}
           </div>
         </section>
+
+        <Separator className="my-12 md:my-16" />
 
         <section className="mb-12 md:mb-16">
           <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-10">Meet Our Leadership</h2>
@@ -192,13 +199,15 @@ export default function AboutPage() {
                   <CardDescription className="text-primary">{leader.title}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground text-sm">{leader.bio}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{leader.bio}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
         </section>
 
+        <Separator className="my-12 md:my-16" />
+        
         <section className="py-12 md:py-16 bg-secondary rounded-lg shadow-lg">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <Link href="/careers" aria-label="View Open Positions">

@@ -52,6 +52,7 @@ export default function ScoutMeSportsPage() {
                   data-ai-hint="athlete scouting"
                   layout="fill"
                   objectFit="cover"
+                  priority
                 />
               </div>
               <p className="text-muted-foreground text-lg">

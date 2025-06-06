@@ -1,9 +1,10 @@
 
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { mockBlogPosts, type BlogPost } from '@/lib/blogData';
-import { CalendarDays, UserCircle } from 'lucide-react';
+import { CalendarDays, UserCircle, ChevronRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 interface BlogPostPageProps {
@@ -58,9 +59,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <article className="bg-background py-12 md:py-20">
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+        <nav className="mb-6 text-sm text-muted-foreground flex items-center">
+          <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
+          <ChevronRight className="h-4 w-4 mx-1" />
+          <span className="text-foreground truncate max-w-[200px] md:max-w-none">{post.title}</span>
+        </nav>
+
         <header className="mb-8 md:mb-12">
           <h1 className="font-headline text-3xl md:text-5xl font-bold text-primary mb-4">{post.title}</h1>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-muted-foreground text-sm mb-4">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-x-6 gap-y-3 text-muted-foreground text-sm mb-4">
             <div className="flex items-center">
               <CalendarDays className="h-4 w-4 mr-1.5" />
               {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
