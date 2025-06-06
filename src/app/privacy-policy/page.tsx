@@ -11,30 +11,33 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="bg-background py-12 md:py-20">
+    <div className="bg-background py-10 sm:py-12 md:py-20">
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
-        <div className="mb-8">
-          <Button variant="outline" asChild>
-            <Link href="/" aria-label="Navigate back to Rally Athletes homepage">
+        <div className="mb-6 sm:mb-8">
+          <Button variant="outline" asChild aria-label="Navigate back to Rally Athletes homepage">
+            <Link href="/">
               <ArrowLeft className="mr-2 h-4 w-4" /> <ShieldCheck className="mr-2 h-4 w-4 text-primary" /> Back to Rally Athletes
             </Link>
           </Button>
         </div>
 
-        <header className="mb-10 md:mb-12 pb-6 border-b">
-          <div className="flex items-center justify-start mb-4">
-             <FileText className="h-10 w-10 text-primary mr-3" />
-             <h1 className="font-headline text-3xl md:text-4xl font-bold text-primary">Privacy Policy</h1>
+        <header className="mb-8 sm:mb-10 md:mb-12 pb-4 sm:pb-6 border-b">
+          <div className="flex items-center justify-start mb-3 sm:mb-4">
+             <FileText className="h-8 w-8 sm:h-10 sm:w-10 text-primary mr-2 sm:mr-3" />
+             <h1 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold text-primary">Privacy Policy</h1>
           </div>
-          <p className="text-sm text-muted-foreground/80">Last updated: June 6, 2025</p>
+          <p className="text-xs sm:text-sm text-muted-foreground/80">Last updated: June 6, 2025</p>
         </header>
 
-        <article className="prose prose-lg dark:prose-invert max-w-none text-foreground prose-headings:font-headline prose-headings:text-primary prose-p:text-lg prose-p:leading-relaxed prose-a:text-accent hover:prose-a:text-accent/80 prose-strong:font-semibold">
+        <article className="prose prose-lg dark:prose-invert max-w-none text-foreground prose-headings:font-headline prose-headings:text-primary prose-p:text-base sm:prose-p:text-lg prose-p:leading-relaxed prose-a:text-accent hover:prose-a:text-accent/80 prose-strong:font-semibold
+                            prose-h2:text-xl sm:prose-h2:text-2xl md:prose-h2:text-3xl 
+                            prose-h3:text-lg sm:prose-h3:text-xl md:prose-h3:text-2xl
+                            prose-h4:text-base sm:prose-h4:text-lg">
           <p>
             Rally Athletes (“Rally Athletes,” “we,” “us,” or “our”) operates the Rally Athletes corporate site and the associated brand sites—ScoutMe Sports, My Team Dashboard, and Fuel My Game—collectively referred to as the “Service.” We respect your privacy and are committed to protecting the personal information you provide while using our Service. This Privacy Policy explains how we collect, use, share, and safeguard your information, and describes your rights regarding that information. Please read it carefully.
           </p>
 
-          <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">1. Scope & Applicability</h2>
+          <h2>1. Scope & Applicability</h2>
           <p><strong>Brands Covered</strong></p>
           <p>ScoutMe Sports: A platform where aspiring high-school (and multi-sport) athletes create public profiles, upload highlights, and connect with recruiters or coaches.</p>
           <p>Fuel My Game: A nutrition-tracking application tailored to athletes’ unique caloric and macronutrient needs, integrating with food databases and leveraging AI for personalized recommendations.</p>
@@ -42,10 +45,10 @@ export default function PrivacyPolicyPage() {
           <p><strong>Users:</strong> Athletes, parents or legal guardians of minor athletes, coaches, club administrators, recruiters, and general visitors.</p>
           <p><strong>Geographical Scope:</strong> We serve users in the United States and internationally. By using our Service, you consent to this Privacy Policy and to any applicable local privacy laws (for example, the California Consumer Privacy Act (CCPA) or the EU General Data Protection Regulation (GDPR), as detailed below).</p>
 
-          <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">2. Information We Collect</h2>
+          <h2>2. Information We Collect</h2>
           <p>We collect information you provide directly and information collected automatically when you interact with our Service.</p>
           
-          <h3 className="font-headline text-xl md:text-2xl mt-6 mb-3">2.1. Information You Provide Voluntarily</h3>
+          <h3>2.1. Information You Provide Voluntarily</h3>
           <p><strong>Account Registration & Profile Data</strong></p>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>Name, email address, password (hashed), phone number</li>
@@ -64,7 +67,7 @@ export default function PrivacyPolicyPage() {
           <p><strong>Payment Information (if you purchase a subscription or upgrade)</strong></p>
           <p>Billing address, credit/debit card details, and other billing information, processed by our PCI-compliant payment processors (e.g., Stripe, PayPal). We do not store full payment card data on our servers.</p>
 
-          <h3 className="font-headline text-xl md:text-2xl mt-6 mb-3">2.2. Information Collected Automatically</h3>
+          <h3>2.2. Information Collected Automatically</h3>
           <p><strong>Usage Data</strong></p>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>Browser type and version, operating system, device model, device type (mobile, tablet, desktop), screen resolution, and system settings</li>
@@ -80,9 +83,9 @@ export default function PrivacyPolicyPage() {
           </ul>
           <p>See Section 7 for more details on cookies, opt-out, and tracking settings.</p>
 
-          <h3 className="font-headline text-xl md:text-2xl mt-6 mb-3">2.3. Information from Third Parties & Publicly Available Sources</h3>
+          <h3>2.3. Information from Third Parties & Publicly Available Sources</h3>
           <p><strong>Third-Party APIs & Integrations</strong></p>
-          <h4 className="font-headline text-lg mt-4 mb-2">ScoutMe Sports</h4>
+          <h4>ScoutMe Sports</h4>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>UI Avatars API (generates default avatars if you don’t upload a photo)</li>
             <li>Unsplash API (provides default banner images)</li>
@@ -91,14 +94,14 @@ export default function PrivacyPolicyPage() {
             <li>HUDL, YouTube, Trace, Veo (mocked connections) for video hub</li>
             <li>Third-party social networks (YouTube, Instagram, X, TikTok, HUDL) for pulling link previews or feed snippets if you connect your accounts</li>
           </ul>
-          <h4 className="font-headline text-lg mt-4 mb-2">Fuel My Game</h4>
+          <h4>Fuel My Game</h4>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>USDA FoodData Central API (for nutritional facts of raw ingredients)</li>
             <li>Open Food Facts, UPCitemdb.com (for barcode lookups of packaged foods)</li>
             <li>TheMealDB API (for recipe search by name, ingredient, category, area)</li>
             <li>Genkit AI (for personalized food recommendations)</li>
           </ul>
-          <h4 className="font-headline text-lg mt-4 mb-2">My Team Dashboard</h4>
+          <h4>My Team Dashboard</h4>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>Firebase (authentication, real-time database, Firestore, hosting, storage)</li>
             <li>Firebase Cloud Messaging (for push notifications)</li>
@@ -109,7 +112,7 @@ export default function PrivacyPolicyPage() {
           <p><strong>Social Media & Public Profiles</strong></p>
           <p>If you link your social media accounts (Instagram, YouTube, X, TikTok, HUDL), we may retrieve your public username, profile picture, and publicly available profile details to populate your ScoutMe Sports or My Team Dashboard profile.</p>
 
-          <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">3. How We Use Your Information</h2>
+          <h2>3. How We Use Your Information</h2>
           <p>We use the information we collect for the following purposes:</p>
           <p><strong>Provide & Maintain the Service</strong></p>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
@@ -148,7 +151,7 @@ export default function PrivacyPolicyPage() {
             <li>Comply with legal obligations (tax reporting, record keeping, and responding to law enforcement requests)</li>
           </ul>
 
-          <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">4. How We Share Your Information</h2>
+          <h2>4. How We Share Your Information</h2>
           <p><strong>Within Rally Athletes</strong></p>
           <p>Your data may be shared internally among Rally Athletes, ScoutMe Sports, My Team Dashboard, and Fuel My Game teams as needed to maintain your account, provide services, and troubleshoot issues.</p>
           <p><strong>Service Providers & Third-Party Partners</strong></p>
@@ -170,7 +173,7 @@ export default function PrivacyPolicyPage() {
           <p>We may disclose your information if required to do so by law or in response to valid requests by public authorities (e.g., to meet national security or law enforcement requirements).</p>
           <p>We may disclose information to prevent imminent harm to the rights, property, or safety of Rally Athletes, our users, or the public, or as part of an investigation into suspected illegal activity.</p>
 
-          <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">5. Data Retention</h2>
+          <h2>5. Data Retention</h2>
           <p><strong>Account Information & Profile Data</strong></p>
           <p>We retain your account and profile information as long as your account is active or as needed to provide you with services.</p>
           <p><strong>Transactional Records</strong></p>
@@ -180,7 +183,7 @@ export default function PrivacyPolicyPage() {
           <p><strong>Deletion or Anonymization</strong></p>
           <p>If you request account deletion (see Section 10), we will remove or anonymize your personal information from our active systems within 30 days, except for data that we are legally required to keep (e.g., financial records).</p>
 
-          <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">6. Children’s Privacy</h2>
+          <h2>6. Children’s Privacy</h2>
           <p><strong>Under 13</strong></p>
           <p>ScoutMe Sports may be used by minor athletes under age 13 only with verifiable parental or legal guardian consent, in full compliance with the Children’s Online Privacy Protection Act (COPPA). We do not knowingly collect or maintain information from children under 13 on our Service without parental consent.</p>
           <p><strong>Parental Controls</strong></p>
@@ -188,7 +191,7 @@ export default function PrivacyPolicyPage() {
           <p><strong>Under 18 (General)</strong></p>
           <p>If you are under 18 but over 13, you may register only with a parent’s or guardian’s permission. We recommend parental supervision for any minor using our Service.</p>
 
-          <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">7. Cookies & Tracking Technologies</h2>
+          <h2>7. Cookies & Tracking Technologies</h2>
           <p>We use cookies, web beacons, and similar tracking technologies to collect information and improve your experience.</p>
           <p><strong>What Are Cookies?</strong></p>
           <p>Cookies are small text files placed on your device by websites to remember your preferences, track usage, or maintain session state.</p>
@@ -204,27 +207,27 @@ export default function PrivacyPolicyPage() {
           <p><strong>Managing Cookies</strong></p>
           <p>You can set your browser to refuse cookies or alert you when cookies are being sent. However, disabling cookies may affect essential functionality of the Service (e.g., signing in, saving preferences). To learn more about opting out of interest-based advertising, visit <Link href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">aboutads.info/choices/ <ExternalLink className="ml-1 h-4 w-4" /></Link> and <Link href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">networkadvertising.org/choices/ <ExternalLink className="ml-1 h-4 w-4" /></Link>.</p>
 
-          <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">8. Your Privacy Rights & Choices</h2>
+          <h2>8. Your Privacy Rights & Choices</h2>
           <p>Depending on where you live, you may have certain rights regarding your personal information.</p>
-          <h3 className="font-headline text-xl md:text-2xl mt-6 mb-3">8.1. Access, Correction, Deletion</h3>
+          <h3>8.1. Access, Correction, Deletion</h3>
           <p><strong>Access:</strong> You may review the personal data we hold about you by logging in and viewing your profile settings.</p>
           <p><strong>Correction:</strong> You can update or correct your profile, content, or preferences at any time via your account.</p>
           <p><strong>Deletion:</strong> You may request that we delete your account and personal data. To do so, send an email to privacy@rallyathletes.com with the subject line “Account Deletion Request.” We will remove or anonymize your personal data within 30 days, except for any data we must legally retain.</p>
           
-          <h3 className="font-headline text-xl md:text-2xl mt-6 mb-3">8.2. Opt-Out of Marketing Communications</h3>
+          <h3>8.2. Opt-Out of Marketing Communications</h3>
           <p>If you no longer wish to receive promotional emails or newsletters, you can:</p>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>Click the “unsubscribe” link at the bottom of any marketing email we send, or</li>
             <li>Email privacy@rallyathletes.com with the subject line “Unsubscribe.”</li>
           </ul>
 
-          <h3 className="font-headline text-xl md:text-2xl mt-6 mb-3">8.3. Cookie & Analytics Opt-Out</h3>
+          <h3>8.3. Cookie & Analytics Opt-Out</h3>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>Browser Settings: Adjust your browser settings to block or delete cookies. Note that some features may not work properly without cookies.</li>
             <li>Google Analytics Opt-Out: You can install the Google Analytics Opt-Out Browser Add-On, available at <Link href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">tools.google.com/dlpage/gaoptout <ExternalLink className="ml-1 h-4 w-4" /></Link>.</li>
           </ul>
 
-          <h3 className="font-headline text-xl md:text-2xl mt-6 mb-3">8.4. Do Not Sell or Share My Personal Information (for California Residents)</h3>
+          <h3>8.4. Do Not Sell or Share My Personal Information (for California Residents)</h3>
           <p>Under the California Consumer Privacy Act (CCPA), California residents have the right to:</p>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>Request that we disclose the categories and specific pieces of personal information we’ve collected about them.</li>
@@ -232,7 +235,7 @@ export default function PrivacyPolicyPage() {
             <li>Opt out of the sale or sharing of their personal information. We do not sell your personal data for monetary consideration. However, we do share data with service providers to perform essential business functions. To exercise CCPA rights, please contact us at privacy@rallyathletes.com.</li>
           </ul>
 
-          <h3 className="font-headline text-xl md:text-2xl mt-6 mb-3">8.5. European Union & United Kingdom Residents (GDPR)</h3>
+          <h3>8.5. European Union & United Kingdom Residents (GDPR)</h3>
           <p>If you are in the EU or the UK, you have the right to:</p>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>Right of access: Request a copy of the personal data we hold about you.</li>
@@ -245,7 +248,7 @@ export default function PrivacyPolicyPage() {
           </ul>
           <p>To exercise these rights, please send an email to privacy@rallyathletes.com. We may require you to verify your identity before fulfilling your request.</p>
 
-          <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">9. Data Security</h2>
+          <h2>9. Data Security</h2>
           <p>We take reasonable and commercially acceptable measures to protect your information from unauthorized access, alteration, disclosure, or destruction. These measures include:</p>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>Encryption of data in transit using TLS (HTTPS)</li>
@@ -257,21 +260,21 @@ export default function PrivacyPolicyPage() {
           </ul>
           <p>However, no method of data transmission or storage is 100% secure. If you suspect any unauthorized use of your account, please change your password immediately and notify us at privacy@rallyathletes.com.</p>
 
-          <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">10. Children Under 18</h2>
+          <h2>10. Children Under 18</h2>
           <p><strong>Under 13:</strong> We do not knowingly collect Personal Data from children under 13 without verifiable parental consent. If we learn that we have inadvertently collected information from a child under 13 without such consent, we will delete that information as soon as possible.</p>
           <p><strong>Ages 13–17:</strong> Parents or guardians must supervise any minor between the ages of 13 and 17. We encourage parents to review their child’s account information and privacy settings.</p>
 
-          <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">11. International Data Transfers</h2>
+          <h2>11. International Data Transfers</h2>
           <p>Because our servers, service providers, and operations span multiple countries (including the United States), your personal data may be transferred to and stored on servers located outside your country of residence. Whenever we transfer your information internationally, we implement standard contractual clauses, approved binding corporate rules, or other mechanisms permitted under applicable data protection laws to ensure that your data remains subject to adequate safeguards.</p>
 
-          <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">12. Third-Party Links & Embedded Content</h2>
+          <h2>12. Third-Party Links & Embedded Content</h2>
           <p>Our Service may contain links to third-party websites (e.g., college ID camp directories, NCAA resources, external nutrition sites) or embedded content (e.g., YouTube videos, social media feeds, recipe pages). We do not control those sites, and this Privacy Policy does not apply to their practices. We encourage you to read the privacy policies of any third party before providing personal information.</p>
           <p>Similarly, if you click on ads or promotional links displayed on our sites, the advertiser’s privacy practices will govern the data collected.</p>
 
-          <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">13. Changes to This Privacy Policy</h2>
+          <h2>13. Changes to This Privacy Policy</h2>
           <p>We may revise this Privacy Policy as our Service evolves or in response to changes in applicable laws, regulations, or industry standards. When we update this policy, we will revise the “Last updated” date at the top and, if the changes are material, provide a notice (e.g., banner on our homepage or notification email) at least 30 days before they take effect. We encourage you to review this Privacy Policy periodically to stay informed about how we collect, use, and share your information. Your continued use of the Service after the revised Privacy Policy becomes effective signifies your acceptance of the changes.</p>
 
-          <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">14. Contact Us</h2>
+          <h2>14. Contact Us</h2>
           <p>If you have questions or concerns about this Privacy Policy, your personal information, or our privacy practices, you can contact us by:</p>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>By email: privacy@rallyathletes.com</li>

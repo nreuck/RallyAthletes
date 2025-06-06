@@ -33,10 +33,10 @@ export function Navbar() {
   if (!isMounted) {
     return (
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
+        <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 sm:px-6">
           <Link href="/" className="flex items-center gap-2" aria-label="Rally Athletes Home">
-            <ShieldCheck className="h-7 w-7 text-primary" />
-            <span className="font-headline text-xl font-semibold">Rally Athletes</span>
+            <ShieldCheck className="h-6 w-6 sm:h-7 sm:w-7 text-primary" />
+            <span className="font-headline text-lg sm:text-xl font-semibold">Rally Athletes</span>
           </Link>
           <div className="md:hidden">
             <Button variant="ghost" size="icon" disabled>
@@ -50,13 +50,13 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
+      <div className="container flex h-16 max-w-screen-2xl items-center justify-between px-4 sm:px-6">
         <Link href="/" className="flex items-center gap-2" onClick={closeSheet} aria-label="Rally Athletes Home">
-          <ShieldCheck className="h-7 w-7 text-primary" />
-          <span className="font-headline text-xl font-semibold">Rally Athletes</span>
+          <ShieldCheck className="h-6 w-6 sm:h-7 sm:w-7 text-primary" />
+          <span className="font-headline text-lg sm:text-xl font-semibold">Rally Athletes</span>
         </Link>
 
-        <nav className="hidden md:flex gap-6 items-center" aria-label="Main Navigation">
+        <nav className="hidden md:flex gap-4 lg:gap-6 items-center" aria-label="Main Navigation">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -80,20 +80,20 @@ export function Navbar() {
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[280px] sm:w-[320px]">
+            <SheetContent side="right" className="w-[260px] sm:w-[300px]">
               <div className="p-4">
                 <Link href="/" className="flex items-center gap-2 mb-8" onClick={closeSheet} aria-label="Rally Athletes Home">
                   <ShieldCheck className="h-7 w-7 text-primary" />
                   <span className="font-headline text-xl font-semibold">Rally Athletes</span>
                 </Link>
-                <nav className="flex flex-col gap-4" aria-label="Mobile Navigation">
+                <nav className="flex flex-col gap-3" aria-label="Mobile Navigation">
                   {navLinks.map((link) => (
                     <Link
                       key={link.href}
                       href={link.href}
                       onClick={closeSheet}
                       className={cn(
-                        "text-lg font-medium transition-colors hover:text-primary py-2",
+                        "text-base font-medium transition-colors hover:text-primary py-2",
                         pathname === link.href ? "text-primary font-semibold" : "text-foreground"
                       )}
                       aria-current={pathname === link.href ? "page" : undefined}
@@ -110,4 +110,3 @@ export function Navbar() {
     </header>
   );
 }
-

@@ -33,26 +33,26 @@ function JobPositionCard({ position }: { position: JobPosition }) {
   return (
     <Card className="flex flex-col h-full hover:shadow-lg transition-shadow duration-300">
       <CardHeader>
-        <CardTitle className="font-headline text-xl">{position.title}</CardTitle>
+        <CardTitle className="font-headline text-lg sm:text-xl">{position.title}</CardTitle>
         <CardDescription className="text-sm text-primary">{position.department}</CardDescription>
       </CardHeader>
       <CardContent className="flex-grow space-y-3">
-        <div className="flex items-center text-sm text-muted-foreground">
+        <div className="flex items-center text-xs sm:text-sm text-muted-foreground">
           <MapPin className="h-4 w-4 mr-2 shrink-0" />
           {position.location}
         </div>
-        <div className="flex items-center text-sm text-muted-foreground">
+        <div className="flex items-center text-xs sm:text-sm text-muted-foreground">
           <Briefcase className="h-4 w-4 mr-2 shrink-0" />
           <Badge variant="secondary" className="mr-2">{position.type}</Badge>
         </div>
-        <div className="flex items-center text-sm text-muted-foreground">
+        <div className="flex items-center text-xs sm:text-sm text-muted-foreground">
           <CalendarDays className="h-4 w-4 mr-2 shrink-0" />
           {formattedDate ? `Posted: ${formattedDate}` : 'Loading date...'}
         </div>
         <p className="text-muted-foreground text-sm line-clamp-3">{position.summary}</p>
       </CardContent>
       <CardFooter>
-        <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
+        <Button asChild className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-sm sm:text-base">
           <Link href={position.applyLink}>
             Apply Now <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
@@ -107,62 +107,62 @@ export default function CareersPageClient() {
   const areFiltersActive = searchTerm || selectedDepartment || selectedLocation || selectedType;
 
   return (
-    <div className="bg-background py-12 md:py-20">
+    <div className="bg-background py-10 sm:py-12 md:py-20">
       <div className="container mx-auto px-4 md:px-6">
-        <header className="text-center mb-12 md:mb-16">
-          <Briefcase className="h-16 w-16 text-primary mx-auto mb-6" />
-          <h1 className="font-headline text-4xl md:text-5xl font-bold text-primary mb-4">Join Our Team</h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+        <header className="text-center mb-10 md:mb-16">
+          <Briefcase className="h-12 w-12 sm:h-16 sm:w-16 text-primary mx-auto mb-6" />
+          <h1 className="font-headline text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">Join Our Team</h1>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             At Rally Athletes, we're passionate about innovation and driven to empower the sports world. We're looking for talented individuals to help us build the future.
           </p>
         </header>
 
-        <section id="why-join-us" className="mb-12 md:mb-20">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-10">Why Work With Rally Athletes?</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section id="why-join-us" className="mb-10 md:mb-20">
+          <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-10">Why Work With Rally Athletes?</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {companyBenefits.map((benefit) => (
               <Card key={benefit.title} className="text-center hover:shadow-md transition-shadow duration-300">
                 <CardHeader>
                   <div className="mx-auto bg-primary/10 rounded-full p-3 w-fit mb-4">
-                    <benefit.icon className="w-10 h-10 text-primary" />
+                    <benefit.icon className="w-8 h-8 sm:w-10 sm:h-10 text-primary" />
                   </div>
-                  <CardTitle className="font-headline text-2xl">{benefit.title}</CardTitle>
+                  <CardTitle className="font-headline text-xl sm:text-2xl">{benefit.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{benefit.description}</p>
+                  <p className="text-muted-foreground text-sm sm:text-base">{benefit.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
         </section>
         
-        <section id="open-positions" className="mb-12 md:mb-20">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold text-center mb-10">Current Openings</h2>
+        <section id="open-positions" className="mb-10 md:mb-20">
+          <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-10">Current Openings</h2>
 
           {allPositions.length > 0 && (
-            <div className="mb-8 p-6 border rounded-lg shadow-sm bg-card">
+            <div className="mb-8 p-4 sm:p-6 border rounded-lg shadow-sm bg-card">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-end">
                 <div>
                   <Label htmlFor="search-term" className="block text-sm font-medium text-muted-foreground mb-1">Search by keyword</Label>
                   <div className="relative">
-                    <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground pointer-events-none" />
+                    <SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground pointer-events-none" />
                     <Input
                       id="search-term"
                       type="text"
                       placeholder="e.g., Engineer, Product"
                       value={searchTerm}
                       onChange={(e) => setSearchTerm(e.target.value)}
-                      className="pl-10 pr-10"
+                      className="pl-10 pr-10 text-sm sm:text-base"
                     />
                     {searchTerm && (
                       <Button
                         variant="ghost"
                         size="icon"
-                        className="absolute right-2 top-1/2 -translate-y-1/2 h-7 w-7 text-muted-foreground hover:text-foreground"
+                        className="absolute right-2 top-1/2 -translate-y-1/2 h-6 w-6 sm:h-7 sm:w-7 text-muted-foreground hover:text-foreground"
                         onClick={() => setSearchTerm('')}
                         aria-label="Clear search term"
                       >
-                        <ClearIcon className="h-4 w-4" />
+                        <ClearIcon className="h-3 w-3 sm:h-4 sm:w-4" />
                       </Button>
                     )}
                   </div>
@@ -173,7 +173,7 @@ export default function CareersPageClient() {
                     value={selectedDepartment} 
                     onValueChange={(value) => setSelectedDepartment(value === ALL_DEPARTMENTS_ITEM_VALUE ? "" : value)}
                   >
-                    <SelectTrigger id="department-filter">
+                    <SelectTrigger id="department-filter" className="text-sm sm:text-base">
                       <SelectValue placeholder="Filter by Department" />
                     </SelectTrigger>
                     <SelectContent>
@@ -188,7 +188,7 @@ export default function CareersPageClient() {
                     value={selectedLocation} 
                     onValueChange={(value) => setSelectedLocation(value === ALL_LOCATIONS_ITEM_VALUE ? "" : value)}
                   >
-                    <SelectTrigger id="location-filter">
+                    <SelectTrigger id="location-filter" className="text-sm sm:text-base">
                       <SelectValue placeholder="Filter by Location" />
                     </SelectTrigger>
                     <SelectContent>
@@ -203,7 +203,7 @@ export default function CareersPageClient() {
                     value={selectedType} 
                     onValueChange={(value) => setSelectedType(value === ALL_TYPES_ITEM_VALUE ? "" : value)}
                   >
-                    <SelectTrigger id="type-filter">
+                    <SelectTrigger id="type-filter" className="text-sm sm:text-base">
                       <SelectValue placeholder="Filter by Job Type" />
                     </SelectTrigger>
                     <SelectContent>
@@ -214,12 +214,12 @@ export default function CareersPageClient() {
                 </div>
               </div>
               {areFiltersActive && (
-                <div className="mt-4 flex justify-between items-center">
-                    <p className="text-sm text-muted-foreground">
+                <div className="mt-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+                    <p className="text-xs sm:text-sm text-muted-foreground">
                         Showing {filteredPositions.length} of {allPositions.length} job{allPositions.length === 1 ? "" : "s"}
                     </p>
-                    <Button variant="ghost" onClick={handleClearFilters} className="text-sm text-primary hover:text-accent">
-                        <ClearIcon className="mr-2 h-4 w-4" />
+                    <Button variant="ghost" onClick={handleClearFilters} className="text-xs sm:text-sm text-primary hover:text-accent">
+                        <ClearIcon className="mr-1 sm:mr-2 h-3 w-3 sm:h-4 sm:w-4" />
                         Clear Filters
                     </Button>
                 </div>
@@ -228,22 +228,22 @@ export default function CareersPageClient() {
           )}
 
           {filteredPositions.length > 0 ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {filteredPositions.map((position) => (
                 <JobPositionCard key={position.id} position={position} />
               ))}
             </div>
           ) : allPositions.length > 0 ? (
              <div className="text-center py-10">
-                <SearchIcon className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                <p className="text-xl text-muted-foreground mb-2">No positions match your search criteria.</p>
-                <p className="text-md text-muted-foreground">Please try adjusting your keyword search or filters, or clear them to see all open roles.</p>
+                <SearchIcon className="h-10 w-10 sm:h-12 sm:w-12 text-muted-foreground mx-auto mb-4" />
+                <p className="text-lg sm:text-xl text-muted-foreground mb-2">No positions match your search criteria.</p>
+                <p className="text-sm sm:text-md text-muted-foreground">Please try adjusting your keyword search or filters, or clear them to see all open roles.</p>
              </div>
           ) : (
             <div className="text-center py-10">
-              <Lightbulb className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-              <p className="font-headline text-xl text-foreground mb-4">We're Always Looking for Talent!</p>
-              <p className="text-md text-muted-foreground max-w-lg mx-auto mb-6">
+              <Lightbulb className="h-10 w-10 sm:h-12 sm:w-12 text-muted-foreground mx-auto mb-4" />
+              <p className="font-headline text-lg sm:text-xl text-foreground mb-4">We're Always Looking for Talent!</p>
+              <p className="text-sm sm:text-md text-muted-foreground max-w-lg mx-auto mb-6">
                 There are no open positions at the moment, but we're growing fast! If you're passionate about sports technology and believe your skills could make an impact at Rally Athletes, we'd love to hear from you.
               </p>
               <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
@@ -255,9 +255,9 @@ export default function CareersPageClient() {
           )}
         </section>
 
-        <section className="py-12 md:py-16 bg-secondary rounded-lg shadow-lg">
+        <section className="py-10 sm:py-12 md:py-16 bg-secondary rounded-lg shadow-lg">
           <div className="container mx-auto px-4 md:px-6 text-center">
-            <div className="relative h-64 md:h-80 w-full max-w-3xl mx-auto mb-8 rounded-lg overflow-hidden shadow-xl">
+            <div className="relative h-56 sm:h-64 md:h-80 w-full max-w-3xl mx-auto mb-8 rounded-lg overflow-hidden shadow-xl">
                 <Image
                     src="https://placehold.co/800x400.png"
                     alt="Diverse team collaborating at Rally Athletes"
@@ -266,8 +266,8 @@ export default function CareersPageClient() {
                     objectFit="cover"
                 />
             </div>
-            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">Be Part of Something Bigger</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg">
+            <h2 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Be Part of Something Bigger</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-base sm:text-lg">
               We believe in fostering a culture of innovation, collaboration, and growth. Join Rally Athletes and make a real impact on the future of sports technology.
             </p>
              <Button size="lg" asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
@@ -282,4 +282,3 @@ export default function CareersPageClient() {
     </div>
   );
 }
-

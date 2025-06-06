@@ -61,17 +61,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const nextPost = postIndex < mockBlogPosts.length - 1 ? mockBlogPosts[postIndex + 1] : null;
 
   return (
-    <article className="bg-background py-12 md:py-20">
+    <article className="bg-background py-10 sm:py-12 md:py-20">
       <div className="container mx-auto px-4 md:px-6 max-w-4xl">
         <nav className="mb-6 text-sm text-muted-foreground flex items-center">
           <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
           <ChevronRight className="h-4 w-4 mx-1" />
-          <span className="text-foreground truncate max-w-[200px] md:max-w-none">{post.title}</span>
+          <span className="text-foreground truncate max-w-[150px] sm:max-w-[200px] md:max-w-none">{post.title}</span>
         </nav>
 
         <header className="mb-8 md:mb-12">
-          <h1 className="font-headline text-3xl md:text-5xl font-bold text-primary mb-4">{post.title}</h1>
-          <div className="flex flex-col sm:flex-row sm:items-center gap-x-6 gap-y-3 text-muted-foreground text-sm mb-4">
+          <h1 className="font-headline text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">{post.title}</h1>
+          <div className="flex flex-col sm:flex-row sm:items-center gap-x-4 gap-y-2 text-muted-foreground text-sm mb-4">
             <div className="flex items-center">
               <CalendarDays className="h-4 w-4 mr-1.5" />
               {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
@@ -91,7 +91,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         </header>
 
         {post.imageUrl && (
-          <div className="relative h-64 md:h-96 w-full mb-8 md:mb-12 rounded-lg overflow-hidden shadow-lg">
+          <div className="relative h-56 sm:h-64 md:h-96 w-full mb-8 md:mb-12 rounded-lg overflow-hidden shadow-lg">
             <Image
               src={post.imageUrl}
               alt={post.imageAlt}
@@ -108,19 +108,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           
           {post.content.sections.map((section, index) => (
             <div key={index}>
-              <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">{section.heading}</h2>
+              <h2 className="font-headline text-xl sm:text-2xl md:text-3xl mt-8 mb-4">{section.heading}</h2>
               <p>{section.paragraph}</p>
             </div>
           ))}
 
-          <h3 className="font-headline text-xl md:text-2xl mt-8 mb-4">Conclusion</h3>
+          <h3 className="font-headline text-lg sm:text-xl md:text-2xl mt-8 mb-4">Conclusion</h3>
           <p>{post.content.conclusion}</p>
         </div>
 
         <nav className="mt-12 md:mt-16 pt-8 border-t flex flex-col sm:flex-row justify-between gap-4">
           {previousPost ? (
-            <Button variant="outline" asChild>
-              <Link href={`/blog/${previousPost.slug}`} className="flex items-center group">
+            <Button variant="outline" asChild className="w-full sm:w-auto">
+              <Link href={`/blog/${previousPost.slug}`} className="flex items-center group justify-center sm:justify-start">
                 <ArrowLeft className="h-4 w-4 mr-2 transition-transform group-hover:-translate-x-1" />
                 <div>
                   <span className="text-xs text-muted-foreground">Previous Post</span>
@@ -128,10 +128,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
               </Link>
             </Button>
-          ) : <div />} 
+          ) : <div className="w-full sm:w-auto" />} 
           {nextPost ? (
-            <Button variant="outline" asChild>
-              <Link href={`/blog/${nextPost.slug}`} className="flex items-center text-right group">
+            <Button variant="outline" asChild className="w-full sm:w-auto">
+              <Link href={`/blog/${nextPost.slug}`} className="flex items-center text-right group justify-center sm:justify-end">
                  <div>
                   <span className="text-xs text-muted-foreground">Next Post</span>
                   <p className="font-medium line-clamp-1">{nextPost.title}</p>
@@ -139,10 +139,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
-          ) : <div />}
+          ) : <div className="w-full sm:w-auto" />}
         </nav>
       </div>
     </article>
   );
 }
-
