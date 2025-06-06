@@ -31,12 +31,12 @@ export default function PrivacyPolicyPage() {
 
         <article className="prose prose-lg dark:prose-invert max-w-none text-foreground prose-headings:font-headline prose-headings:text-primary prose-p:text-lg prose-p:leading-relaxed prose-a:text-accent hover:prose-a:text-accent/80 prose-strong:font-semibold">
           <p>
-            Rally Athletes (“Rally Athletes,” “we,” “us,” or “our”) operates the Rally Athletes corporate site and the associated brand sites—ScoutMeSports, My Team Dashboard, and Fuel My Game—collectively referred to as the “Service.” We respect your privacy and are committed to protecting the personal information you provide while using our Service. This Privacy Policy explains how we collect, use, share, and safeguard your information, and describes your rights regarding that information. Please read it carefully.
+            Rally Athletes (“Rally Athletes,” “we,” “us,” or “our”) operates the Rally Athletes corporate site and the associated brand sites—ScoutMe Sports, My Team Dashboard, and Fuel My Game—collectively referred to as the “Service.” We respect your privacy and are committed to protecting the personal information you provide while using our Service. This Privacy Policy explains how we collect, use, share, and safeguard your information, and describes your rights regarding that information. Please read it carefully.
           </p>
 
           <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">1. Scope & Applicability</h2>
           <p><strong>Brands Covered</strong></p>
-          <p>ScoutMeSports: A platform where aspiring high-school (and multi-sport) athletes create public profiles, upload highlights, and connect with recruiters or coaches.</p>
+          <p>ScoutMe Sports: A platform where aspiring high-school (and multi-sport) athletes create public profiles, upload highlights, and connect with recruiters or coaches.</p>
           <p>Fuel My Game: A nutrition-tracking application tailored to athletes’ unique caloric and macronutrient needs, integrating with food databases and leveraging AI for personalized recommendations.</p>
           <p>My Team Dashboard: A team/club/league management platform for scheduling, communications, roster management, live scores, and facility booking.</p>
           <p><strong>Users:</strong> Athletes, parents or legal guardians of minor athletes, coaches, club administrators, recruiters, and general visitors.</p>
@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>Name, email address, password (hashed), phone number</li>
             <li>Mailing address, city, state, ZIP/postal code, and country (if you choose to share it)</li>
-            <li>For ScoutMeSports: Date of birth, school or club affiliations, athletic statistics (position, class year, height/weight, primary sport and multi-sport breakdown, physical metrics, GPA, academic awards, video-highlight links), social media/video platform links, personal bio or statement, photos (avatar/banner), references (max 3), commitment status, and any other data you choose to share in your profile.</li>
+            <li>For ScoutMe Sports: Date of birth, school or club affiliations, athletic statistics (position, class year, height/weight, primary sport and multi-sport breakdown, physical metrics, GPA, academic awards, video-highlight links), social media/video platform links, personal bio or statement, photos (avatar/banner), references (max 3), commitment status, and any other data you choose to share in your profile.</li>
             <li>For Fuel My Game: Age, sex, sport(s), height, weight, dietary targets (calories, macros, hydration), food log entries, hydration entries, meal plan selections (if any), saved recipes, and preferences or dietary restrictions.</li>
             <li>For My Team Dashboard: Club/league/team name, your role (coach, administrator, parent, or athlete), roster details, player profiles (if you choose to create or manage them), schedule preferences, facility/venue details, communications settings, payment or billing information for premium services.</li>
           </ul>
@@ -82,7 +82,7 @@ export default function PrivacyPolicyPage() {
 
           <h3 className="font-headline text-xl md:text-2xl mt-6 mb-3">2.3. Information from Third Parties & Publicly Available Sources</h3>
           <p><strong>Third-Party APIs & Integrations</strong></p>
-          <h4>ScoutMeSports</h4>
+          <h4>ScoutMe Sports</h4>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
             <li>UI Avatars API (generates default avatars if you don’t upload a photo)</li>
             <li>Unsplash API (provides default banner images)</li>
@@ -107,7 +107,7 @@ export default function PrivacyPolicyPage() {
             <li>Stripe or PayPal (for payment processing)</li>
           </ul>
           <p><strong>Social Media & Public Profiles</strong></p>
-          <p>If you link your social media accounts (Instagram, YouTube, X, TikTok, HUDL), we may retrieve your public username, profile picture, and publicly available profile details to populate your ScoutMeSports or My Team Dashboard profile.</p>
+          <p>If you link your social media accounts (Instagram, YouTube, X, TikTok, HUDL), we may retrieve your public username, profile picture, and publicly available profile details to populate your ScoutMe Sports or My Team Dashboard profile.</p>
 
           <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">3. How We Use Your Information</h2>
           <p>We use the information we collect for the following purposes:</p>
@@ -133,7 +133,7 @@ export default function PrivacyPolicyPage() {
           </ul>
           <p><strong>AI-Driven Features & Recommendations</strong></p>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
-            <li>Process your profile data, performance stats, food logs, and preferences to generate AI insights (e.g., “AI Quick Pitch” on ScoutMeSports, nutrition recommendations on Fuel My Game, optimized match schedules on My Team Dashboard)</li>
+            <li>Process your profile data, performance stats, food logs, and preferences to generate AI insights (e.g., “AI Quick Pitch” on ScoutMe Sports, nutrition recommendations on Fuel My Game, optimized match schedules on My Team Dashboard)</li>
             <li>Improve AI models over time through aggregated, anonymized usage data</li>
           </ul>
           <p><strong>Communications & Notifications</strong></p>
@@ -150,7 +150,7 @@ export default function PrivacyPolicyPage() {
 
           <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">4. How We Share Your Information</h2>
           <p><strong>Within Rally Athletes</strong></p>
-          <p>Your data may be shared internally among Rally Athletes, ScoutMeSports, My Team Dashboard, and Fuel My Game teams as needed to maintain your account, provide services, and troubleshoot issues.</p>
+          <p>Your data may be shared internally among Rally Athletes, ScoutMe Sports, My Team Dashboard, and Fuel My Game teams as needed to maintain your account, provide services, and troubleshoot issues.</p>
           <p><strong>Service Providers & Third-Party Partners</strong></p>
           <p>We may share certain information with external vendors and service providers who help us deliver, maintain, or enhance our Service. For example:</p>
           <ul className="list-disc list-inside space-y-1 my-4 pl-4">
@@ -182,7 +182,7 @@ export default function PrivacyPolicyPage() {
 
           <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">6. Children’s Privacy</h2>
           <p><strong>Under 13</strong></p>
-          <p>ScoutMeSports may be used by minor athletes under age 13 only with verifiable parental or legal guardian consent, in full compliance with the Children’s Online Privacy Protection Act (COPPA). We do not knowingly collect or maintain information from children under 13 on our Service without parental consent.</p>
+          <p>ScoutMe Sports may be used by minor athletes under age 13 only with verifiable parental or legal guardian consent, in full compliance with the Children’s Online Privacy Protection Act (COPPA). We do not knowingly collect or maintain information from children under 13 on our Service without parental consent.</p>
           <p><strong>Parental Controls</strong></p>
           <p>A parent or guardian may review, edit, or delete their child’s account at any time by contacting us at privacy@rallyathletes.com.</p>
           <p><strong>Under 18 (General)</strong></p>
@@ -269,7 +269,7 @@ export default function PrivacyPolicyPage() {
           <p>Similarly, if you click on ads or promotional links displayed on our sites, the advertiser’s privacy practices will govern the data collected.</p>
 
           <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">13. Changes to This Privacy Policy</h2>
-          <p>We may revise this Privacy Policy as our Service evolves or in response to changes in applicable laws, regulations, or industry standards. When we update this policy, we will revise the “Last updated” date at the top and, if the changes are material, provide a notice (e.g., banner on our homepage or notification email) at least 30 days before they take effect. We encourage you to review this Privacy Policy periodically to stay informed about how we collect, use, and share your information. Your continued use of rallies after the revised Privacy Policy becomes effective signifies your acceptance of the changes.</p>
+          <p>We may revise this Privacy Policy as our Service evolves or in response to changes in applicable laws, regulations, or industry standards. When we update this policy, we will revise the “Last updated” date at the top and, if the changes are material, provide a notice (e.g., banner on our homepage or notification email) at least 30 days before they take effect. We encourage you to review this Privacy Policy periodically to stay informed about how we collect, use, and share your information. Your continued use of the Service after the revised Privacy Policy becomes effective signifies your acceptance of the changes.</p>
 
           <h2 className="font-headline text-2xl md:text-3xl mt-8 mb-4">14. Contact Us</h2>
           <p>If you have questions or concerns about this Privacy Policy, your personal information, or our privacy practices, you can contact us by:</p>
@@ -291,4 +291,3 @@ export default function PrivacyPolicyPage() {
   );
 }
 
-    

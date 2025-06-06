@@ -1,4 +1,3 @@
-
 // components/ContactForm.tsx
 "use client";
 
@@ -108,7 +107,7 @@ export function ContactForm() {
             <FormItem>
               <FormLabel>Subject</FormLabel>
               <FormControl>
-                <Input placeholder="Inquiry about ScoutMeSports" {...field} />
+                <Input placeholder="Inquiry about ScoutMe Sports" {...field} />
               </FormControl>
               <FormMessage>{state.errors?.subject?.[0]}</FormMessage>
             </FormItem>
@@ -132,4 +131,3 @@ export function ContactForm() {
     </Form>
   );
 }
-

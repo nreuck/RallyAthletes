@@ -11,8 +11,8 @@ export const metadata: Metadata = {
     default: 'Rally Athletes - Powering Athletes, Uniting Brands',
     template: '%s | Rally Athletes',
   },
-  description: 'Central hub for Rally Athletes brands: ScoutMeSports, My Team Dashboard, and Fuel My Game. Discover our mission to empower athletes and sports organizations.',
-  keywords: ['Rally Athletes', 'ScoutMeSports', 'My Team Dashboard', 'Fuel My Game', 'sports technology', 'athlete empowerment'],
+  description: 'Central hub for Rally Athletes brands: ScoutMe Sports, My Team Dashboard, and Fuel My Game. Discover our mission to empower athletes and sports organizations.',
+  keywords: ['Rally Athletes', 'ScoutMe Sports', 'My Team Dashboard', 'Fuel My Game', 'sports technology', 'athlete empowerment'],
 };
 
 export default function RootLayout({

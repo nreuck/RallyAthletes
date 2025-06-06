@@ -8,7 +8,7 @@ import Image from 'next/image';
 const brands = [
   {
     icon: Users,
-    name: 'ScoutMeSports',
+    name: 'ScoutMe Sports',
     description: 'Connecting talented athletes with scouts and opportunities worldwide. Your journey to professional sports starts here.',
     link: '/scoutme',
   },
@@ -36,7 +36,7 @@ export default function HomePage() {
             Powering Athletes, <span className="text-primary">Uniting Brands</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Rally Athletes unites groundbreaking sports technology under one roof. Discover our family of brands—ScoutMeSports, My Team Dashboard, and Fuel My Game—each platform meticulously engineered to elevate every dimension of the athletic journey.
+            Rally Athletes unites groundbreaking sports technology under one roof. Discover our family of brands—ScoutMe Sports, My Team Dashboard, and Fuel My Game—each platform meticulously engineered to elevate every dimension of the athletic journey.
           </p>
           <div className="flex gap-4 justify-center">
             <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform transition-transform hover:scale-105">

@@ -109,15 +109,15 @@ export const mockBlogPosts: BlogPost[] = [
   },
   {
     slug: 'scoutmesports-connecting-talent',
-    title: 'ScoutMeSports: Connecting Talent with Opportunity',
-    excerpt: 'An inside look at how ScoutMeSports is bridging the gap between aspiring athletes and professional scouting networks.',
+    title: 'ScoutMe Sports: Connecting Talent with Opportunity',
+    excerpt: 'An inside look at how ScoutMe Sports is bridging the gap between aspiring athletes and professional scouting networks.',
     date: '2024-04-20',
     imageUrl: 'https://placehold.co/1200x630.png',
     imageAlt: 'Athlete performing in front of scouts',
     imageHint: 'athlete scouting',
-    tags: ['ScoutMeSports', 'Scouting', 'Athlete Recruitment'],
+    tags: ['ScoutMe Sports', 'Scouting', 'Athlete Recruitment'],
     content: {
-      introduction: "For many talented athletes, getting noticed by scouts and securing professional opportunities can be a major hurdle. ScoutMeSports is dedicated to breaking down these barriers, creating a transparent and efficient platform for talent discovery and recruitment.",
+      introduction: "For many talented athletes, getting noticed by scouts and securing professional opportunities can be a major hurdle. ScoutMe Sports is dedicated to breaking down these barriers, creating a transparent and efficient platform for talent discovery and recruitment.",
       sections: [
         {
           heading: "Comprehensive Athlete Profiles",
@@ -129,10 +129,10 @@ export const mockBlogPosts: BlogPost[] = [
         },
         {
           heading: "Building Connections",
-          paragraph: "ScoutMeSports facilitates direct communication between athletes, coaches, and scouts, fostering a network where talent can be recognized and opportunities can flourish. We are committed to creating pathways for athletes to pursue their dreams."
+          paragraph: "ScoutMe Sports facilitates direct communication between athletes, coaches, and scouts, fostering a network where talent can be recognized and opportunities can flourish. We are committed to creating pathways for athletes to pursue their dreams."
         }
       ],
-      conclusion: "ScoutMeSports is leveling the playing field, ensuring that talent, hard work, and dedication are the primary drivers of an athlete's journey. Rally Athletes is proud to support this mission of connecting talent with opportunity."
+      conclusion: "ScoutMe Sports is leveling the playing field, ensuring that talent, hard work, and dedication are the primary drivers of an athlete's journey. Rally Athletes is proud to support this mission of connecting talent with opportunity."
     }
   }
 ];
