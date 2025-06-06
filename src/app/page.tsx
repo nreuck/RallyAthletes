@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { BrandCard } from '@/components/BrandCard';
@@ -35,7 +36,7 @@ export default function HomePage() {
             Powering Athletes, <span className="text-primary">Uniting Brands</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-            Rally Athletes is your central hub for innovative sports technology. Discover ScoutMeSports, My Team Dashboard, and Fuel My Game – platforms designed to elevate every aspect of the athletic journey.
+            Rally Athletes unites groundbreaking sports technology under one roof. Discover our family of brands—ScoutMeSports, My Team Dashboard, and Fuel My Game—each platform meticulously engineered to elevate every dimension of the athletic journey.
           </p>
           <div className="flex gap-4 justify-center">
             <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg transform transition-transform hover:scale-105">
