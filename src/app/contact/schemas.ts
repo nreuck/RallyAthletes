@@ -1,10 +1,24 @@
 
 import { z } from 'zod';
 
+export const contactSubjects = [
+  "General Inquiry",
+  "ScoutMe Sports Question",
+  "My Team Dashboard Question",
+  "Fuel My Game Question",
+  "Partnership Opportunity",
+  "Media Inquiry",
+  "Technical Support",
+  "Feedback & Suggestions",
+  "Other",
+] as const;
+
 export const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
-  subject: z.string().min(5, { message: "Subject must be at least 5 characters." }),
+  subject: z.enum(contactSubjects, { 
+    errorMap: () => ({ message: "Please select a valid subject." }) 
+  }),
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
 

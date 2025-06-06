@@ -1,7 +1,7 @@
 // components/ContactForm.tsx
 "use client";
 
-import { useActionState } from 'react'; // Changed from 'react-dom'
+import { useActionState } from 'react';
 import { useFormStatus } from 'react-dom';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -20,10 +20,11 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { submitContactForm } from '@/app/contact/actions';
 import type { ContactFormState } from '@/app/contact/schemas';
-import { contactFormSchema } from '@/app/contact/schemas';
+import { contactFormSchema, contactSubjects } from '@/app/contact/schemas';
 import { useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 
 const initialState: ContactFormState = {
   message: '',
@@ -41,7 +42,7 @@ function SubmitButton() {
 }
 
 export function ContactForm() {
-  const [state, formAction] = useActionState(submitContactForm, initialState); // Changed to useActionState
+  const [state, formAction] = useActionState(submitContactForm, initialState);
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
@@ -49,7 +50,7 @@ export function ContactForm() {
     defaultValues: {
       name: '',
       email: '',
-      subject: '',
+      subject: undefined, // Default to undefined for Select placeholder to work
       message: '',
     },
   });
@@ -106,9 +107,20 @@ export function ContactForm() {
           render={({ field }) => (
             <FormItem>
               <FormLabel>Subject</FormLabel>
-              <FormControl>
-                <Input placeholder="Inquiry about ScoutMe Sports" {...field} />
-              </FormControl>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a subject" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  {contactSubjects.map((subject) => (
+                    <SelectItem key={subject} value={subject}>
+                      {subject}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
               <FormMessage>{state.errors?.subject?.[0]}</FormMessage>
             </FormItem>
           )}

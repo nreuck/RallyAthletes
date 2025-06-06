@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { BrandCard } from '@/components/BrandCard';
 import { Users, LayoutDashboard, Flame, Newspaper, Send } from 'lucide-react';
 import Image from 'next/image';
+import { BlogPostCard } from '@/components/BlogPostCard';
+import { mockBlogPosts } from '@/lib/blogData';
 
 const brands = [
   {
@@ -27,6 +29,10 @@ const brands = [
 ];
 
 export default function HomePage() {
+  const latestPosts = mockBlogPosts
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 3);
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -90,17 +96,39 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Content Hub / Blog CTA Section */}
+      {/* Latest Blog Posts Section */}
       <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <Newspaper className="h-16 w-16 text-primary mx-auto mb-6" />
-          <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">Stay Updated</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            Explore industry insights, success stories, and the latest updates from Rally Athletes and our brands.
-          </p>
-          <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Link href="/blog">Visit Our Blog</Link>
-          </Button>
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-12">
+            <Newspaper className="h-16 w-16 text-primary mx-auto mb-6" />
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">Latest Insights & News</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Stay informed with the latest updates, success stories, and industry trends from the world of Rally Athletes.
+            </p>
+          </div>
+          {latestPosts.length > 0 ? (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {latestPosts.map((post) => (
+                <BlogPostCard
+                  key={post.slug}
+                  slug={post.slug}
+                  title={post.title}
+                  excerpt={post.excerpt}
+                  date={post.date}
+                  imageUrl={post.imageUrl}
+                  imageAlt={post.imageAlt}
+                  imageHint={post.imageHint}
+                />
+              ))}
+            </div>
+          ) : (
+            <p className="text-center text-muted-foreground text-lg">No blog posts available yet. Check back soon!</p>
+          )}
+          <div className="text-center mt-12">
+            <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Link href="/blog">Visit Our Blog</Link>
+            </Button>
+          </div>
         </div>
       </section>
 

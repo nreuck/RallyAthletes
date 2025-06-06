@@ -18,7 +18,7 @@ export default {
     extend: {
       fontFamily: {
         headline: ['Inter', 'sans-serif'],
-        body: ['PT Sans', 'sans-serif'],
+        body: ['Inter', 'sans-serif'], // Changed from PT Sans
         code: ['monospace', 'monospace'],
       },
       colors: {
