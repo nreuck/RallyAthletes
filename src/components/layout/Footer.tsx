@@ -1,4 +1,3 @@
-
 // components/layout/Footer.tsx
 import Link from 'next/link';
 import { Linkedin, Twitter, Facebook, ShieldCheck } from 'lucide-react';

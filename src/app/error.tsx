@@ -3,7 +3,8 @@
 
 import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
-import { AlertTriangle } from 'lucide-react';
+import { AlertTriangle, Home } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Error({
   error,
@@ -26,16 +27,27 @@ export default function Error({
       <p className="text-lg text-muted-foreground mb-8 max-w-md">
         We encountered an unexpected issue. Please try again, or if the problem persists, contact support.
       </p>
-      <Button
-        onClick={
-          // Attempt to recover by trying to re-render the segment
-          () => reset()
-        }
-        size="lg"
-        className="bg-primary hover:bg-primary/90 text-primary-foreground"
-      >
-        Try Again
-      </Button>
+      <div className="flex flex-col sm:flex-row gap-4">
+        <Button
+          onClick={
+            // Attempt to recover by trying to re-render the segment
+            () => reset()
+          }
+          size="lg"
+          className="bg-primary hover:bg-primary/90 text-primary-foreground"
+        >
+          Try Again
+        </Button>
+        <Button
+          asChild
+          size="lg"
+          variant="outline"
+        >
+          <Link href="/">
+            <Home className="mr-2 h-5 w-5" /> Go to Homepage
+          </Link>
+        </Button>
+      </div>
       {error?.digest && (
         <p className="text-xs text-muted-foreground mt-4">Error Digest: {error.digest}</p>
       )}
