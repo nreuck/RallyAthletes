@@ -102,13 +102,13 @@ export default function AboutPage() {
                 <Target className="w-8 h-8 mr-3 text-primary" /> Our Mission
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                To empower athletes and sports organizations through innovative digital solutions, fostering growth, engagement, and peak performance. We aim to provide accessible, powerful tools that make a tangible difference in the sports journey.
+                At Rally Athletes, our mission is to create and unite purpose-built digital platforms that empower athletes, teams, and their support networks to achieve peak performance, seamless collaboration, and meaningful connections. Through our family of brands—ScoutMe, Fuel My Game, and My Team Dashboard—we deliver intuitive tools and data-driven insights that help athletes showcase their talents, fuel their bodies with optimal nutrition, and streamline team management. By blending innovative technology, personalized experiences, and a deep understanding of the sports ecosystem, we enable every athlete, coach, parent, and organization to focus on what truly matters: growth, teamwork, and success both on and off the field.
               </p>
               <h2 className="font-headline text-3xl font-semibold mb-4 flex items-center">
                 <Eye className="w-8 h-8 mr-3 text-primary" /> Our Vision
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                To be the leading digital ecosystem in sports, connecting every athlete, team, and fan with the tools they need to succeed and enjoy the game. We envision a future where technology seamlessly enhances every aspect of sport.
+                We envision a future where every athlete—regardless of age, background, or discipline—has access to a unified, intelligent ecosystem that supports their journey from grassroots to elite levels. Rally Athletes will be recognized as the premier destination for holistic athlete development, where: Talent Discovery through ScoutMe unlocks opportunities for athletes to be seen by recruiters, coaches, and programs worldwide, leveling the playing field for those who strive to go further. Personalized Nutrition via Fuel My Game evolves into an indispensable resource that adapts to each athlete’s unique needs, anticipating trends in sports science and leveraging AI to optimize performance and recovery. Effortless Team Operations powered by My Team Dashboard becomes the standard for clubs, leagues, and organizations to coordinate schedules, communications, and facilities without friction, so coaches and administrators can focus on strategy and development. By seamlessly integrating our brands under the Rally Athletes umbrella, we will pioneer a connected sports ecosystem—one that anticipates the needs of tomorrow’s athletes, fuels their passion today, and galvanizes communities around shared goals. We aim to inspire a global movement in which data-informed decisions, equitable access, and collaboration drive the next generation of sporting excellence.
               </p>
             </div>
           </div>
