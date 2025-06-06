@@ -12,11 +12,11 @@ export function Footer() {
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4" aria-label="Rally Athletes Home">
               <Image 
-                src="/rally-athletes-logo.png" 
+                src="/rally-athletes-logo-with-text.png" 
                 alt="Rally Athletes Logo" 
-                width={28} 
-                height={28}
-                className="h-6 w-6 sm:h-7 sm:w-7"
+                width={250} // Intrinsic width for aspect ratio
+                height={50} // Intrinsic height for aspect ratio
+                className="h-6 sm:h-7 w-auto" // Display height, width auto
               />
               <span className="font-headline text-lg sm:text-xl font-semibold">Rally Athletes</span>
             </Link>
