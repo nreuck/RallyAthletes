@@ -13,7 +13,7 @@ export function Footer() {
               <span className="font-headline text-xl font-semibold">Rally Athletes</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Empowering athletes and sports organizations through innovative digital solutions.
+              Driven by innovation and athlete success, Rally Athletes unites platforms to empower the sports community towards peak performance and meaningful connections.
             </p>
           </div>
           <div className="md:col-span-1">
